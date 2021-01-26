@@ -1,0 +1,63 @@
+
+* {
+	font-family: ubuntu, sans-serif;
+	box-sizing: border-box;
+	font-size: 25px;
+}
+
+header {
+	text-align: center;
+	background-color: #ff9900;
+	font-size: 35px;
+}
+
+.col {
+	float: left;
+	padding: 10px;
+}
+
+.col.left {
+	width: 25%;
+}
+
+.col.center {
+	width: 50%;
+}
+
+.col.right {
+	width: 25%;
+}
+
+.horizontal:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.core {
+	display: flex;
+	margin: auto;
+	width: 90%;
+	justify-content: center;
+}
+
+.core-text {
+	/* width: 70%; */
+}
+
+nav {
+	width: 30%;
+	/* margin: 10px; */
+}
+
+p {
+	font-size: 25px;
+}
+
+.top-text {
+	font-size: 30px;
+}
+
+footer {
+	font-size: 10px;
+}
