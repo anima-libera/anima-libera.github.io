@@ -102,6 +102,10 @@ footer a {
 	padding: 10px;
 }
 
+footer .cgse {
+	filter: brightness(0%);
+}
+
 footer .github {
 	mix-blend-mode: multiply;
 }
