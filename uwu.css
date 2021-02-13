@@ -102,10 +102,22 @@ footer a {
 	padding: 10px;
 }
 
+/* Trial and error was used to generate these.
+ * If you got better, please feel free to open an issue in the GitHub repo,
+ * it would be extremely appreciated. */
 footer .cgse {
 	filter: brightness(0%);
 }
-
-footer .github {
+footer .normal:hover {
+	mix-blend-mode: luminosity;
+	filter: grayscale(100%);
+	filter: invert(100%);
+}
+footer .github:not(:hover) {
 	mix-blend-mode: multiply;
+}
+footer .github:hover {
+	filter: invert(100%);
+	mix-blend-mode: multiply;
+	mix-blend-mode: color-dodge;
 }
