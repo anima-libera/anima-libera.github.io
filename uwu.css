@@ -8,6 +8,7 @@
 ::selection {
 	color: rgba(0,255,0,1);
 	background: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,1);
 }
 
 a {
@@ -102,9 +103,7 @@ footer a {
 	padding: 10px;
 }
 
-/* Trial and error was used to generate these.
- * If you got better, please feel free to open an issue in the GitHub repo,
- * it would be extremely appreciated. */
+/* Warning: bad. */
 footer .cgse {
 	filter: brightness(0%);
 }
