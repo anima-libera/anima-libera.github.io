@@ -1,6 +1,11 @@
 
+@font-face {
+	font-family: rubick;
+	src: url(fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+
 * {
-	font-family: ubuntu, sans-serif;
+	font-family: rubick, ubuntu, sans-serif;
 	box-sizing: border-box;
 	font-size: 25px;
 }
@@ -36,8 +41,8 @@ header {
 	margin: 60px;
 }
 header h1 {
-	font-size: 35px;
-	font-weight: normal;
+	font-size: 45px;
+	font-weight: bold;
 	margin: -10px;
 }
 header h2 {
@@ -111,6 +116,9 @@ footer .discord:not(:hover) {
 	mix-blend-mode: luminosity;
 	filter: grayscale(100%);
 	filter: invert(100%);
+}
+footer .discord:hover {
+	cursor: pointer;
 }
 footer .normal:hover {
 	mix-blend-mode: luminosity;
