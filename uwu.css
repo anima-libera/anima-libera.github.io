@@ -107,6 +107,11 @@ footer a {
 footer .cgse {
 	filter: brightness(0%);
 }
+footer .discord:not(:hover) {
+	mix-blend-mode: luminosity;
+	filter: grayscale(100%);
+	filter: invert(100%);
+}
 footer .normal:hover {
 	mix-blend-mode: luminosity;
 	filter: grayscale(100%);
