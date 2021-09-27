@@ -5,7 +5,7 @@
 */
 
 document.write(`
-<a onclick="alert('Discord user name:\n\nAnima Libera#2157')" class="discord"
+<a onclick="alert('Discord user name:\\n\\nAnima Libera#2157')" class="discord"
 	style="margin-top: 8px;">
 	<img src="pics/discord-logo.svg" width="45" height="45" alt="Discord account"
 		title="Discord account">

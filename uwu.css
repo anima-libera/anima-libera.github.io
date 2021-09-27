@@ -104,7 +104,7 @@ footer {
 }
 
 footer a {
-	display: flexbox;
+	/*display: flexbox;*/
 	padding: 10px;
 }
 
