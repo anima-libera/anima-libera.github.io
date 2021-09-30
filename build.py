@@ -1,4 +1,6 @@
 
+import re
+
 class Page:
 	def __init__(self, **kwargs):
 		self.__dict__.update(kwargs)
@@ -16,14 +18,17 @@ page_list = [
 	),
 ]
 
-def insert_footer(code):
-	footer_file = open("src/footer.html", "r")
-	footer_code = footer_file.read()
-	footer_file.close()
-	return code.format(footer = "\n" + footer_code)
+def handle_insert_tags(code):
+	def replace_insert(match):
+		file = open(f"src/{match.group(1)}", "r")
+		content = file.read()
+		file.close()
+		return content
+	return re.sub(r"<\s*insert\s+file\s*=\s*\"([^\"]*)\"\s*/>",
+		replace_insert, code)
 
 transformation_list = [
-	insert_footer,
+	handle_insert_tags,
 ]
 
 for page in page_list:

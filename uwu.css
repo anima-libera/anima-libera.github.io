@@ -1,5 +1,6 @@
 
-/* Best CSS sheet  */
+/* Best CSS sheet available in the known universe.
+ * You have been warned. */
 
 @font-face {
 	font-family: rubick;
@@ -106,7 +107,7 @@ footer {
 }
 
 footer a {
-	/*display: flexbox;*/
+	/* display: flexbox; */
 	padding: 10px;
 }
 
