@@ -1,8 +1,12 @@
 
 import re
 import io
-import sys
+import shutil
+import os
+import pathlib
 from typing import Dict, List, Match, Pattern, Tuple, Callable
+
+## Printing with indentation
 
 indent_list: List[str] = []
 on_line_start: bool = True
@@ -37,12 +41,7 @@ def print_indent(*args, sep = " ", end = "\n"):
 		print(line, end = "")
 		on_line_start = False
 
-class Page:
-	def __init__(self, **kwargs):
-		self.__dict__.update(kwargs)
-		if "tab_name" not in self.__dict__:
-			self.tab_name = self.name
-
+## Page generation tools
 
 def tag_re(tag_name: str) -> Pattern[str]:
 	return re.compile(rf"""
@@ -116,7 +115,6 @@ def handle_custom_tags(page_code: str, page: Page) -> str:
 		
 		# Format content
 		content = content_indent(content.strip(), indent, newline)
-
 		return content
 
 	new_code, modif_count = re.subn(tag_re("insert"), repl, page_code)
@@ -126,6 +124,19 @@ def handle_custom_tags(page_code: str, page: Page) -> str:
 
 def file_content(file_path):
 	return open(file_path, "r").read()
+
+def handle_path_macros(page_code: str, page: Page) -> str:
+	gen_path_from_home = pathlib.Path(page.path_gen).parts
+	gen_path_to_home = "/".join([".."] * (len(gen_path_from_home)-1))
+	return page_code.replace("HOME", gen_path_to_home)
+
+## Page definition and generation
+
+class Page:
+	def __init__(self, **kwargs):
+		self.__dict__.update(kwargs)
+		if "tab_name" not in self.__dict__:
+			self.tab_name = self.name
 
 page_list: List[Page] = [
 	Page(
@@ -138,7 +149,7 @@ page_list: List[Page] = [
 	Page(
 		name = "404 Page",
 		path_src = "src/template.html",
-		path_gen = "gen/404.html",
+		path_gen = "404.html",
 		content = "Oh nyo, error 404 &gt;&lt;",
 	),
 	Page(
@@ -155,6 +166,11 @@ page_list: List[Page] = [
 	),
 ]
 
+# Clean up gen directory
+if os.path.isdir("gen"):
+	shutil.rmtree("gen")
+os.mkdir("gen")
+
 for page in page_list:
 	print_indent(f"Generating \"{page.name}\" to {page.path_gen}")
 	indent_push("| ")
@@ -162,7 +178,9 @@ for page in page_list:
 	src_code = src_file.read()
 	src_file.close()
 
-	gen_code = handle_custom_tags(src_code, page)
+	gen_code = src_code
+	gen_code = handle_custom_tags(gen_code, page)
+	gen_code = handle_path_macros(gen_code, page)
 
 	gen_file = open(page.path_gen, "w")
 	gen_file.write(gen_code)
