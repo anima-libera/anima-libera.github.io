@@ -43,6 +43,9 @@ def print_indent(*args, sep = " ", end = "\n"):
 
 ## Page generation tools
 
+class Page:
+	pass
+
 def tag_re(tag_name: str) -> Pattern[str]:
 	return re.compile(rf"""
 		(?P<indent>((^|(?<=\n))[\ \t]*)?)

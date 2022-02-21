@@ -1,12 +1,35 @@
 <div class="item">
-	The 4 most known and used conventions for indentation are:
-	tabs, 2 spaces, 4 spaces and 8 spaces.
-	The last 3 are similar in that they consist in
-	representing a level of indentation on a line with <i>n</i> spaces,
-	with <i>n</i> being some arbitrary number.
+	Tabs or spaces? Tough debate, holly war, no side getting close to a decisive victory.
+	There are a lot of compilations of arguments for each side out there.
+	In this lost post, I would like to provide one more argument
+	to take place in the great balance of things. An argument in favor of tabs.
 </div>
 
 <div class="item">
-	I may soon write here a list of reasons to use tabs for indentation
-	instead of <i>n</i> spaces with 2 &lt;= <i>n</i> &lt;= 8.
+	Tabs are not characters whose width can be chosen in the editor settings.
+	What is configurable is not the witdth of tabs, it is the width of the space between
+	<a href="https://en.wikipedia.org/wiki/Tab_stop">tab stops</a>.
+	A tab is not multiple spaces, it is a character that dictates the rendering of text to
+	continue from the next tab stop on the current line.
+	Tabs have no width, they allow to shape the rendering of text for better readability.
+	There is an other (commonly used) character with similar properties: the end-of-line.
+	It does not have a width, but it does dictates the rendering of text to continue from
+	the left in the next line (on Windows it is two characters, whatever).
+</div>
+
+<div class="item">
+	It would not even come to mind to mimick the rendering behavior of end-of-line characters
+	by inserting enough spaces to get to the end of the current line to force the editor into
+	displaying the text that comes after on a new line. Then, <i>why</i> so many people find it so natural
+	to mimick the rendering behavior of tabs when indenting by inserting enough spaces to get
+	the text that follows to start at some abritrary column?
+</div>
+
+<div class="item">
+	One could consider a text as an end-of-line-separated list of lines.
+	As each line is separated from the previous line (if any) by an end-of-line character,
+	this seperation can be extended by some number of tabs to indicate on which
+	tab stop this line is to start from.
+	So one could rather consider a text as an extended-end-of-line-separated list
+	of <i>indented</i> lines, which really is what most source code files are.
 </div>
