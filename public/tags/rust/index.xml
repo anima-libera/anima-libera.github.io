@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Rust on Anima&#39;s Portfolio</title>
+    <link>https://anima-libera.github.io/tags/rust/</link>
+    <description>Recent content in Rust on Anima&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anima</copyright>
+    <lastBuildDate>Thu, 08 Feb 2024 17:05:05 +0100</lastBuildDate><atom:link href="https://anima-libera.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" /><icon>https://anima-libera.github.io/favicon.svg</icon>
+    
+    
+    <item>
+      <title>Qwy3 - WIP Minecraft-like in Rust with Wgpu</title>
+      <link>https://anima-libera.github.io/posts/qwy3/</link>
+      <pubDate>Thu, 08 Feb 2024 17:05:05 +0100</pubDate>
+      
+      <guid>https://anima-libera.github.io/posts/qwy3/</guid>
+      <description><![CDATA[<h1 id="qwy3">Qwy3</h1>
+<p>Work in progress Minecraft-like. This project intends to serve as a base to experiment with procedural generation a bit more than what is usually done in Minecraft-likes. This page will only present what is already implemented and will not focus of the future of this project (for which I have so many ideas).</p>
+<p><a href="https://github.com/anima-libera/qwy3">GitHub repository</a></p>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li>Infinite world in all directions including up and down, thanks to cubic chunks.</li>
+<li>Chunk meshing with covered face culling and ambiant occlusion trick.</li>
+<li>Multiple procedural terrain generators. Some use a custom structure generation engine that is fast and can handle large structures while keeping the world independent from chunk loading order (see the generator <code>structures-links-smooth</code>).</li>
+<li>Home made N-dimensional noise computation.</li>
+<li>Optimized chunk loading order that culls away covered and inaccessible chunks and prioritize terrain over air.</li>
+<li>Blocks can be placed and removed (but this is not saved to disk yet).</li>
+<li>Procedurally generated skybox texture.</li>
+<li>Threadpool for terrain generation, meshing and skybox texture generation.</li>
+<li>Dynamic shadows by shadow mapping.</li>
+<li>Procedurally generated block textures (see the generator <code>structures-generated-blocks</code>).</li>
+<li>Configurable controls for most controls.</li>
+<li>Custom widget tree for the interface.</li>
+<li>Grounds for a statically typed stripting language.</li>
+</ul>
+<h2 id="on-intresting-and-fast-terrain-generation">On intresting and fast terrain generation</h2>
+<h3 id="using-noise">Using noise</h3>
+<p>There are multiple world generators available, most of which generate terrain by manipulating 2D and 3D noise.</p>
+<p><img src="/qwy3-01.png" alt="Image of some terrain generation that uses noise to shape the terrain."></p>
+<h4 id="nice-properties">Nice properties</h4>
+<p>We want terrain that generates in a way that does not depend:</p>
+<ul>
+<li>on the order in which the chunks generate,</li>
+<li>on the size of the chunks,</li>
+<li>on the offset of the chunk grid (the placing of the chunk edges).
+These constraints allow to consider that the world would always generate in the same way not matter the other settings or implementation details, instead of a generation that is influenced by the player&rsquo;s actions. Most people would not care about these properties but I want to see the worlds of Qwy3 as exisiting independently from the player&rsquo;s actions.</li>
+</ul>
+<p>Using transformed noise to generate each block of the world guarentees that the terrain generation has these properties because the generator can be expressed as a function that maps block coordinates to a block type. The generation of each block is independant from the generation of all the other blocks, no matter the size, position and loading order of the chunks.</p>
+<h4 id="what-can-we-do-with-noise">What can we do with noise</h4>
+<p>Using N-dimensional noise and transforming it in original ways can make for intresting terrain that break the monotony of 2D height map style terrain. For starters, 3D noise allows for overhangs to appear which doesn&rsquo;t happen with 2D height maps. It also allows for floating islands (which can be desirable or not depending on the feel we aim for the game). But it can allow for so much more!</p>
+<p>Here is an example of multiple 3D noises being used to generate curved lines in 3D, could be used as a base for the generation of some future aerial biomes (when biomes will be implemented):</p>
+<p><img src="/qwy3-02.png" alt="Other image of some terrain generation that uses noise to shape the terrain."></p>
+<h3 id="structures">Structures</h3>
+<p><strong>Comming soon</strong></p>
+<h3 id="chunk-culling-and-loading-order">Chunk culling and loading order</h3>
+<p><strong>Comming soon</strong></p>
+]]></description>
+      
+        <media:thumbnail url="https://anima-libera.github.io/qwy3-crop-name.png" />
+      
+    </item>
+    
+    
+  </channel>
+</rss>

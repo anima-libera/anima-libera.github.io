@@ -1,0 +1,39 @@
+baseURL = "https://anima-libera.github.io/"
+languageCode = "en-us"
+title = "Anima's Portfolio"
+
+theme = "ficurinia"
+copyright = "Anima"
+
+paginate = 99
+summaryLength = 60
+
+# Theme: https://themes.gohugo.io/themes/hugo-ficurinia/
+
+[params]
+author = "Anima"
+logo = "/favicon.svg"
+favicon = "/favicon.png"
+svgicon = "/favicon.svg"
+appletouch = "/apple-touch-icon.png"
+
+showTags = false
+
+imageInArticlePreview = true
+
+showRss = false
+enableSearch = false
+menuStyle = "buttons"
+
+[[menu.icons]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/anima-libera"
+weight = 10
+
+[[menu.icons]]
+identifier = "discord"
+name = "Discord"
+url = "https://discordapp.com/users/430844208228597760"
+weight = 20
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Tags on Anima&#39;s Portfolio</title>
+    <link>https://anima-libera.github.io/tags/</link>
+    <description>Recent content in Tags on Anima&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anima</copyright>
+    <lastBuildDate>Thu, 08 Feb 2024 17:05:05 +0100</lastBuildDate><atom:link href="https://anima-libera.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://anima-libera.github.io/favicon.svg</icon>
+    
+    
+    <item>
+      <title>Rust</title>
+      <link>https://anima-libera.github.io/tags/rust/</link>
+      <pubDate>Thu, 08 Feb 2024 17:05:05 +0100</pubDate>
+      
+      <guid>https://anima-libera.github.io/tags/rust/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Wgpu</title>
+      <link>https://anima-libera.github.io/tags/wgpu/</link>
+      <pubDate>Thu, 08 Feb 2024 17:05:05 +0100</pubDate>
+      
+      <guid>https://anima-libera.github.io/tags/wgpu/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>
