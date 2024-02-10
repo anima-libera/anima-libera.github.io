@@ -25,6 +25,12 @@ showRss = false
 enableSearch = false
 menuStyle = "buttons"
 
+[[menu.main]]
+identifier = "about"
+name = "CV"
+url = "/cv-jeanne.pdf"
+weight = 10
+
 [[menu.icons]]
 identifier = "github"
 name = "GitHub"
