@@ -108,20 +108,48 @@ Here is an example of the balls from earlier, all linked together in one directi
 
 Two structures can also decide to agree on some properties together, for example two structures can agree to link themselves or not (which is important if we want to generate structures that are not always linked together, if a pair does not agree on being linked or not then one might generate half a bridge and the other not and the bridge may stop awkwardly, which might look bad if such behavior was not intended). For two structures to agree on some properties, they can use noise again, as the (home made) noise used in Qwy3 is N-dimensional it can be sampled in a 6D space at both the coordinates of the structures origins for example, in both order, and combine both noise values in an order-independant way (the mean of two values for example) to get a noise value associated to the pair of structures that they will both agree on (both structures will associate the same noise value to the other of their pair, for each pair).
 
-Here is the example of the balls again, but now they can be linked with all of their 6 direct lattice cell neighbors, they decide to link only sometimes, the bridges have a flat top and the generated shapes are also piped in some noise transofmration to make the bridges look more natural (as far as a latice of bridges in an alien sky go anyway, the whole concept way not be very natural but *if it was natural* then it may look like this more than if it was not transformed using noise):
+Here is the example of the balls again, but now they can be linked with all of their 6 direct lattice cell neighbors, they decide to link only sometimes, the bridges have a flat top and the generated shapes are also piped in some noise transofmration to make the bridges look more natural (as far as a lattice of bridges in an alien sky go anyway, the whole concept way not be very natural but *if it was natural* then it may look like this more than if it was not transformed using noise):
 ![Image of some terrain generation using a noise value lattice to generate more links.](/qwy3-08.png)
 
 One more strange-looking take on the idea:
 ![Image of some terrain generation using a noise value lattice to generate even more links.](/qwy3-09.png)
 
-To compare these structure-using generators to the noise-using line generator mentioned above that generates lines of land in the sky, it appears that:
-- the structure-using one may be harder to implement,
+*Note*: To compare these structure-using generators to the noise-using line generator mentioned above that generates lines of land in the sky, it appears that:
+- the structure-using one is harder to implement,
 - but once implemented the structure-using generator is way easier to control and tweak to get it to generate what we want than the noise-using generator,
 - and the structure-using generator expands what is actually possible, for example large lines with a circular cut is not really possible with the noise-using technique.
 
 ### More structures!
 
-**TODO**
+Until now was discussed a technique that allows for one structure per lattice cell that is not allowed to cross lattice cell edges. We want more structures and structures that can cross lattice cell edges.
+
+What is important is that a chunk that generates knows what structures might overlap with itself (the chunk) to generate them (and only them) so that any parts of these structures that overlap with itself (the chunk) are generated now (as we only allow ourselves this one and only occasion to generate all of the chunk's content) or even to check weather a given structure will not overlap with itself (the chunk) to discard only what does not overlap.
+
+Allowing multiple structures per lattice cells is as easy as deciding to do so. To allow for a variable number of structures per lattice cell, we can decide on the number of structures in one given lattice cell by getting a noise value N from the cell, and then for-looping to get new noise values to seed N structures and placing them in the cell.
+
+Allowing lattice-cells-edges-crossing structures can be done as follows: We decide ahead-of-time on a size constraint for all the structures of the world. That gives a bounding box around a structure origin coordinates that is the only area in which that structure's generation is allowed to place blocks. Now, for a given chunk that generates, the chunk can list all the lattice cells that might generate structures that might overlap with itself (the chunk) by extending itself (the chunk) with margins as wide as the already known structure bounding box radius and that gives the area in which structure origins might generatate blocks that overlap with itself (the chunk we are generating). Now, the chunk asks all these lattice cells for their structure origins, and can discard the ones that fall just ouside of the area in which structure origins might generate to overlap with itself (the chunk). All the remaining structure origins are to be generated, discarding every bit of generation that falls outside of the chunk we are generating.
+
+Structure generation can now be defined by a program that uses generation primitives like "placing a block there", "placing a radius there", etc. with these primitives handling the fact that if these shapes or blocks are placed outside of the chunk we are generating then they are discarded. The structure generation program can also querry the terrain with generation primitives such as "what is the terrain block there" (which simply makes the calculations done by the generation of the terrain for the whole chunk, but only for one block this time) to generate structures in a way that takes the terrain into account, this can be useful for example by structures that want to generate on the ground, as they first have to find the ground (because structure origins are generated uniformly in all the 3D space, and are not bound to generate from their origin coordinates but can actually use any part of their bounding box).
+
+Here are trees generated this way:
+
+![Image of some terrain generation using the structure engine idea to generate trees.](/qwy3-10.png)
+
+This may seem like a lot of work for each chunk, and each structure is generated plenty of times (as many times as there are chunks that it could have placed blocks in if it wanted). In practice, this happens to not be the bottleneck at all, if structure origins are not too densly generated and if structures keep their generation at least reasonably fast (in practice, it was a problem once and was fixed immediately without compromising on the look of the generated structures). After all, if chunks are 24x24x24 blocks then each chunk must generate the terrain on each of its blocks, that is 13824 blocks, each terrain block being generated by transforming some noise that takes time to be computed (and was optimized a bit but could be optimized way more with more effort in the future); the structures happen to not slow down the generation of each chunk so much that it was noticeable.
+
+This way of placing and generating structures offers some parameters to tweak to achieve different results, like the lattice cell size, the range of number of structure origins per lattice cell, or the structure generation bounding box size.
+
+Large bounding boxes allows for large structures (much larger that a chunk):
+
+![Image of some terrain generation using the structure engine idea to generate large spikes.](/qwy3-11.png)
+
+Seeding the structure origins with different structure types allows for, well, different structure types (dispatching the generation to the generation program that corresponds to the structure typed that was decided for each structure). Here are trees and boulders, both using a different gereration program:
+
+![Image of some terrain generation using the structure engine with multiple structure types.](/qwy3-12.png)
+
+The bounding box is only about modifying the world, not about querrying information, there is no reason to limit the range in which the generation of a structure can access information. Structures can still access the position of other structures, even other structures whose origins are outside of the bounding box of the structure we are generating. Two structures whose bounding box touch eachother can decide to generate a bringe between them for example, in the same way as described further above:
+
+![Image of some terrain generation using the structure engine with multiple structure types.](/qwy3-13.png)
 
 ## Chunk culling and loading order
 
