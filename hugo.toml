@@ -25,6 +25,12 @@ showRss = false
 enableSearch = false
 menuStyle = "buttons"
 
+[markup]
+[markup.tableOfContents]
+endLevel = 5
+ordered = false
+startLevel = 1
+
 [[menu.main]]
 identifier = "about"
 name = "CV"

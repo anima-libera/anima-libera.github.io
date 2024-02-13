@@ -4,6 +4,7 @@ date = 2024-02-08T17:05:05+01:00
 draft = false
 tags = ['Rust', 'Wgpu']
 image = "/qwy3-00.png"
+toc = true
 +++
 
 Work in progress Minecraft-like. This project intends to serve as a base to experiment with procedural generation a bit more than what is usually done in Minecraft-likes. This page will only present what is already implemented and will not focus of the future of this project (for which I have so many ideas).
