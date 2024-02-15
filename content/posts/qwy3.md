@@ -22,6 +22,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Procedurally generated skybox texture.
 - Threadpool for terrain generation, meshing and skybox texture generation.
 - Dynamic shadows by shadow mapping.
+- Fog effect (blocks in the distance fading in the skybox).
 - Procedurally generated block textures (see the generator `structures-generated-blocks`).
 - Configurable controls for most controls.
 - Custom widget tree for the interface.
@@ -152,6 +153,40 @@ The bounding box is only about modifying the world, not about querrying informat
 
 ![Image of some terrain generation using the structure engine with multiple structure types.](/qwy3-13.png)
 
+That does it for structures.
+
 ## Chunk culling and loading order
 
-**TODO**
+Loading a chunks means either generating its blocks or read them from the disk (the saving to/reading from the disk it not yet implemented), making the blocks of a chunk availavle in RAM. This allows to interact with the blocks but also to mesh them to render them to the screen.
+
+A setting of the game is the radius of a spherical area around the player in which the world is to be loaded and displayed. When the game is launched, the whole area is to be loaded as fast as possible, and when the player moves then unloaded chunks enter the sphere and creates an area (that can be large if the player moves fast) to generate. We often have to generate a large amount of chunks, and make it faster somehow. Any compromise on the generator's quality of work is out of the question, making the generator faster is somewhat discussed above and making reading from disk faster may be discussed after it is implemented in the future. What can we tweak ?
+
+Loading and ignoring the right chunks to load, and loading the chunks in the right order, instead of naively loading chunks closer to the player until the whole spherical desired area is loaded. Loading chunks in the right order makes for a faster meshing and rendering of the chunks that actually have a mesh to render and that the player will actually see, and ignoring chunks that the player has no chance to see or even to interact with allows to spend the constant amount of compute we have on the intresting chunks.
+
+*Note*: Avoiding loading useless chunks also allows to have fewer chunks loaded for the same player experience, which cuts on memory usage and chunk management time in the gameloop.
+
+### Loading front (culling)
+
+The chunks containing and around the player are to be loaded, that we know for sure. How about working from there?
+
+Let us consider a set of chunks that we call the *front*. The front are the chunks that we actually consider for loading. The chunks containing and around the player are put in the front for starters. The chunks in the front that were not loaded yet are flagged for loading. Once loaded, a chunk propagates the front to adjacent chunks that were not loaded yet, and removes itself from the front. That way, the front represents a surface of chunks that expands the loaded area (behind it) as it moves forward, eating the unloaded area.
+
+Working with a propagating front allows for the following optimization: making a chunk C not propagate the front to an adjacent chunk A if its face (the blocks on the face of C that touches A) is made of only opaque blocks. This makes the front fail to propagate through walls that happen to contain whole chunks faces, but also to fail to propagate underground or even inside large masses of solid blocks that lack holes. Given a world that has a surface with only rock underground and air above, then the front will not penertate the underground area and only half of the spherical area will be loaded (thus in half the time!), and this generalizes to any ladmass configuration, no matter its shapes in 3D (given that the masses are large and lack holes).
+
+In a flat world, the loaded area only makes half the full spherical area:
+
+![Image of the loaded area which did not load underground.](/qwy3-14.png)
+
+### Loading priorities (order)
+
+Left at that, the above optimization would still make the loading spend most of its time loading huge volumes of air. Air is fine, and must be loaded just in case it actually contains something worthy of notice (like blocks to be meshed that we failed to predict), and even if it turned out to be just air as predicted then having confirmed that it is air is also valuable information that is needed by gameplay (what if the player or an other entity (yet to be added) flies or falls through that air? Having confirmed that it is indeed air allows for the flying or falling to happend quickly without having to hastily load these chunks). But if we suspect a non-loaded chunk to be air, the loading's efforts may be better spent on an other chunk that we suspect to be part air and part blocks to be meshed. Loading the likely-to-be air after the likely-to-be intresting chunks is a good idea.
+
+That can be done by having two levels of priority in the front. The loaded chunks that propagate the front on adjacent chunks now also check for only-air-blocks faces, and put the corresponding adjacent chunks in the *low priority font* instead of putting them in the *hight priority front* for the others. A chunk containing the surface between the air and the undergorund (thus containing the ground) shall thus put the chunk above it in low priority if its top face is nothing but air, and this generalizes to any shape that takes the surface between solid blocks and air.
+
+Still in a flat world, the loaded area prioritizes the ground first:
+
+![Image of the loaded area which did not load the air yet.](/qwy3-15.png)
+
+Low priority front chunks generate with a much lower probability than hight priority chunks (so as to have a chance to stumble early of land that was predicted as air). Once there is no high priority front to load anymore, all the low priority front chunks are moved to the hight priority, so that one layer of air is now to load, and then the next, etc. as can be seen here:
+
+![Image of the loaded area which loads the air in layers.](/qwy3-16.png)
