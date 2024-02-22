@@ -190,3 +190,12 @@ Still in a flat world, the loaded area prioritizes the ground first:
 Low priority front chunks generate with a much lower probability than hight priority chunks (so as to have a chance to stumble early of land that was predicted as air). Once there is no high priority front to load anymore, all the low priority front chunks are moved to the hight priority, so that one layer of air is now to load, and then the next, etc. as can be seen here:
 
 ![Image of the loaded area which loads the air in layers.](/qwy3-16.png)
+
+# Gallery
+
+![Image of some Qwy3 world.](/qwy3-17.png)
+![Image of some Qwy3 world.](/qwy3-18.png)
+![Image of some Qwy3 world.](/qwy3-19.png)
+![Image of some Qwy3 world.](/qwy3-20.png)
+![Image of some Qwy3 world.](/qwy3-21.png)
+![Image of some Qwy3 world.](/qwy3-22.png)
