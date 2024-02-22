@@ -1,5 +1,5 @@
 +++
-title = 'Qwy3 - WIP Minecraft-like in Rust with Wgpu'
+title = 'Qwy3 - WIP Minecraft-like in Rust & Wgpu'
 date = 2024-02-08T17:05:05+01:00
 draft = false
 tags = ['Rust', 'Wgpu']
@@ -21,7 +21,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Blocks can be placed and removed (but this is not saved to disk yet).
 - Procedurally generated skybox texture.
 - Threadpool for terrain generation, meshing and skybox texture generation.
-- Dynamic shadows by shadow mapping.
+- Dynamic shadows by cascading shadow mapping.
 - Fog effect (blocks in the distance fading in the skybox).
 - Procedurally generated block textures (see the generator `structures-generated-blocks`).
 - Configurable controls for most controls.
