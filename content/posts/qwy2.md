@@ -11,14 +11,6 @@ The previous Minecraft-like attempt before [Qwy3]({{< ref "posts/qwy3" >}}).
 
 [GitHub repository](https://github.com/anima-libera/qwy2)
 
-# Gallery
-
-![Image of some Qwy2 world with the classic generator.](/qwy2-01.png)
-![Image of some Qwy2 world with a sky lines biome near a solid biome.](/qwy2-02.png)
-![Image of some Qwy2 world with two biomes near some empty sky.](/qwy2-03.png)
-![Image of some Qwy2 world with multiple biomes.](/qwy2-04.png)
-![Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue.](/qwy2-05.png)
-
 # Features
 
 - Infinite world in all directions including up and down, thanks to cubic chunks.
@@ -35,6 +27,15 @@ The previous Minecraft-like attempt before [Qwy3]({{< ref "posts/qwy3" >}}).
 - Configurable controls for most controls.
 - Grounds for a stripting language.
 - Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn't cost anything to make this a parameter.)
+- [Custom build system]({{< ref "posts/buildsystem" >}}) for better control of the build process, with code generation for ressource embedding.
+
+# Gallery
+
+![Image of some Qwy2 world with the classic generator.](/qwy2-01.png)
+![Image of some Qwy2 world with a sky lines biome near a solid biome.](/qwy2-02.png)
+![Image of some Qwy2 world with two biomes near some empty sky.](/qwy2-03.png)
+![Image of some Qwy2 world with multiple biomes.](/qwy2-04.png)
+![Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue.](/qwy2-05.png)
 
 # Why the Qwy3 rewrite?
 
