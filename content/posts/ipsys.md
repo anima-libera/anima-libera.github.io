@@ -1,7 +1,7 @@
 +++
 title = 'IPSYS - Particle system with nice random laws in C & OpenGL'
 date = 2024-02-25T17:29:43+01:00
-draft = true
+draft = false
 tags = ['C', 'OpenGL']
 image = "/ipsys-saves-21.png"
 +++
