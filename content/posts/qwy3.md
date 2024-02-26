@@ -16,7 +16,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Infinite world in all directions including up and down, thanks to cubic chunks.
 - Chunk meshing with covered face culling and ambiant occlusion trick.
 - Multiple procedural terrain generators. Some use a custom structure generation engine that is fast and can handle large structures while keeping the world independent from chunk loading order (see the generator `structures-links-smooth`).
-- Home made N-dimensional noise computation.
+- Home made N-dimensional noise computation (a bit more optimized than the [noizebra]({{< ref "posts/noizebra" >}}) implementation).
 - Optimized chunk loading order that culls away covered and inaccessible chunks and prioritize terrain over air.
 - Blocks can be placed and removed (but this is not saved to disk yet).
 - Procedurally generated skybox texture.
