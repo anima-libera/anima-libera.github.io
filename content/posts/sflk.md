@@ -12,7 +12,7 @@ Trying their hand at "making their own programming language" is common place amo
 # Features
 
 - Handmade tokenizer and parser.
-- Handmade implementation of [big integers and arbitrarily precise fractions](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (!), with unit tests.
+- Handmade implementation of [big integers and arbitrarily precise fractions](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (!), with unit tests. Can be seen [here](https://github.com/sflk-lang/sflk/blob/849f8b1571475e25f14017ff61d7d65bfd6fc40f/sflk-lang/src/bignums.rs).
 - Algebraic effects, which I only learned about after implementng them (they are called "signals" in SFLK). All side effects executed by a scope can be intercepted by an outer scope with full control about what to do with it and how to respond.
 - Bytecode.
 - Visualizer of the AST and of the program execution (with scopes visible as gutter indentations).
@@ -31,7 +31,7 @@ Trying their hand at "making their own programming language" is common place amo
 
 For fun!
 
-# Gallery (even tho it is not a project of visual intrest)
+# Gallery
 
 Here can be seen the pretty printed AST of an SFLK program, and the pretty printing of its execution with scope visualization:
 
