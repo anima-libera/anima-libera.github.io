@@ -3,6 +3,7 @@ title = 'SFLK - Interpreted programming language implemented in Rust'
 date = 2024-02-28T16:59:28+01:00
 draft = false
 tags = ['Rust']
+image = "/sflk-00.png"
 +++
 
 Trying their hand at "making their own programming language" is common place among programmers. My attempt at an interpreted language aimed at trying new things instead of focussing on speed, having fun instead of believing that my language would attract any intrest, there are hundreds of new languages each months after all.
