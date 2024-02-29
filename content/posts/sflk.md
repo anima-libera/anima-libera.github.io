@@ -2,7 +2,7 @@
 title = 'SFLK - Interpreted programming language implemented in Rust'
 date = 2024-02-28T16:59:28+01:00
 draft = false
-tags = ['Rust', 'Language']
+tags = ['Rust']
 +++
 
 Trying their hand at "making their own programming language" is common place among programmers. My attempt at an interpreted language aimed at trying new things instead of focussing on speed, having fun instead of believing that my language would attract any intrest, there are hundreds of new languages each months after all.
@@ -12,7 +12,7 @@ Trying their hand at "making their own programming language" is common place amo
 # Features
 
 - Handmade tokenizer and parser.
-- Handmade implementation of [big integers and arbitrarily precise fractions](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (!), with unit tests. Can be seen [here](https://github.com/sflk-lang/sflk/blob/849f8b1571475e25f14017ff61d7d65bfd6fc40f/sflk-lang/src/bignums.rs).
+- Handmade implementation of [big integers and arbitrarily precise fractions](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic) (!!), with unit tests. Can be seen [here](https://github.com/sflk-lang/sflk/blob/849f8b1571475e25f14017ff61d7d65bfd6fc40f/sflk-lang/src/bignums.rs).
 - Algebraic effects, which I only learned about after implementng them (they are called "signals" in SFLK). All side effects executed by a scope can be intercepted by an outer scope with full control about what to do with it and how to respond.
 - Bytecode.
 - Visualizer of the AST and of the program execution (with scopes visible as gutter indentations).
