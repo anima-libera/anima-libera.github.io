@@ -19,6 +19,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Home made N-dimensional noise computation (a bit more optimized than the [noizebra]({{< ref "posts/noizebra" >}}) implementation).
 - Optimized chunk loading order that culls away covered and inaccessible chunks and prioritize terrain over air.
 - Blocks can be placed and removed (but this is not saved to disk yet).
+- AABB vs voxels simple but working collision resolution.
 - Procedurally generated skybox texture.
 - Threadpool for terrain generation, meshing and skybox texture generation.
 - Dynamic shadows by cascading shadow mapping.
