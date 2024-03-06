@@ -1,6 +1,6 @@
 +++
 title = 'Spine - Compiled stack-based language implemented in C then Rust'
-date = 2024-02-28T18:20:13+01:00
+date = 2024-03-06T18:47:08+01:00
 draft = false
 tags = ['C', 'Rust', 'x86_64 machine code']
 image = "/spine-02.png"

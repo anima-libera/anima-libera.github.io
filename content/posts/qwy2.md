@@ -1,6 +1,6 @@
 +++
 title = 'Qwy2 - Previous Minecraft-like attempt in C++ & OpenGL'
-date = 2024-02-22T16:50:24+01:00
+date = 2024-03-06T18:53:08+01:00
 draft = false
 tags = ['C++', 'OpenGL']
 image = "/qwy2-00.png"

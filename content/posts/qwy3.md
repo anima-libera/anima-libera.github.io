@@ -1,6 +1,6 @@
 +++
 title = 'Qwy3 - WIP Minecraft-like in Rust & Wgpu'
-date = 2024-02-08T17:05:05+01:00
+date = 2024-03-06T18:54:08+01:00
 draft = false
 tags = ['Rust', 'Wgpu']
 image = "/qwy3-00.png"

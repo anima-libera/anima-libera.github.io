@@ -1,6 +1,6 @@
 +++
 title = 'Push Dungeon - Roguelike with sokoban-like mechanics in Rust'
-date = 2024-02-29T12:53:52+01:00
+date = 2024-03-06T18:49:08+01:00
 draft = false
 tags = ['Rust']
 image = "/pushdg-03.png"

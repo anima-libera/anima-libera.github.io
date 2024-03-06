@@ -1,6 +1,6 @@
 +++
 title = 'SFLK - Interpreted programming language implemented in Rust'
-date = 2024-02-28T16:59:28+01:00
+date = 2024-03-06T18:48:08+01:00
 draft = false
 tags = ['Rust']
 image = "/sflk-00.png"
