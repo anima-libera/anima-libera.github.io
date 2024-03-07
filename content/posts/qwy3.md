@@ -150,7 +150,7 @@ Seeding the structure origins with different structure types allows for, well, d
 
 ![Image of some terrain generation using the structure engine with multiple structure types.](/qwy3-12.png)
 
-The bounding box is only about modifying the world, not about querrying information, there is no reason to limit the range in which the generation of a structure can access information. Structures can still access the position of other structures, even other structures whose origins are outside of the bounding box of the structure we are generating. Two structures whose bounding box touch eachother can decide to generate a bringe between them for example, in the same way as described further above:
+The bounding box is only about modifying the world, not about querrying information, there is no reason to limit the range in which the generation of a structure can access information. Structures can still access the position of other structures, even other structures whose origins are outside of the bounding box of the structure we are generating. Two structures whose bounding box touch eachother can decide to generate a bridge between them for example, in the same way as described further above:
 
 ![Image of some terrain generation using the structure engine with multiple structure types.](/qwy3-13.png)
 
