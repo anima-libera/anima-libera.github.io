@@ -37,6 +37,12 @@ name = "CV"
 url = "/cv-jeanne.pdf"
 weight = 10
 
+[[menu.main]]
+identifier = "rec-letter"
+name = "Letter (fr)"
+url = "/rec-letter-jeanne.pdf"
+weight = 20
+
 [[menu.icons]]
 identifier = "github"
 name = "GitHub"
