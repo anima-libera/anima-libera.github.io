@@ -201,3 +201,6 @@ Low priority front chunks generate with a much lower probability than hight prio
 ![Image of some Qwy3 world.](/qwy3-20.png)
 ![Image of some Qwy3 world.](/qwy3-21.png)
 ![Image of some Qwy3 world.](/qwy3-22.png)
+![Image of some Qwy3 world.](/qwy3-23.png)
+![Image of some Qwy3 world.](/qwy3-24.png)
+![Image of some Qwy3 world.](/qwy3-25.png)
