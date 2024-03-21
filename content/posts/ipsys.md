@@ -26,6 +26,13 @@ Visualizer of a particle system with randomized interaction laws that often happ
 - Saving/loading to/from disk laws, colors and state, written in a custom file format.
 - Grounds for a widget tree that is actually be maintainable in C.
 
+# A few gifs
+
+![Gif of an Ipsys system.](/ipsys-01.gif)
+![Gif of an Ipsys system.](/ipsys-37.gif)
+![Gif of an Ipsys system.](/ipsys-38.gif)
+![Gif of an Ipsys system.](/ipsys-39.gif)
+
 # Gallery
 
 ![Image of an Ipsys system.](/ipsys-saves-01.png)
@@ -87,11 +94,3 @@ Visualizer of a particle system with randomized interaction laws that often happ
 ![Image of an Ipsys system.](/ipsys-34.png)
 ![Image of an Ipsys system.](/ipsys-35.png)
 ![Image of an Ipsys system.](/ipsys-36.png)
-
-# A few gifs
-
-![Gif of an Ipsys system.](/ipsys-01.gif)
-![Gif of an Ipsys system.](/ipsys-37.gif)
-![Gif of an Ipsys system.](/ipsys-38.gif)
-![Gif of an Ipsys system.](/ipsys-39.gif)
-
