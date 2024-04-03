@@ -20,7 +20,8 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Optimized chunk loading order that culls away covered and inaccessible chunks and prioritize terrain over air.
 - Blocks can be placed and removed.
 - Saving/loading to/from disk, named saves.
-- AABB vs voxels simple but working collision resolution.
+- AABB vs voxels simple but working collision resolution for the player.
+- Entities (in the form of falling blocks for now) that are rendered fast (instanced rendering, with per-instance texturing by indexing in a texture mapping table), saved/loaded without loss or duplication.
 - Procedurally generated skybox texture.
 - Threadpool for terrain generation, meshing and skybox texture generation.
 - Dynamic shadows by cascading shadow mapping.
@@ -30,6 +31,23 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Custom widget tree for the interface.
 - Grounds for a statically typed stripting language.
 - Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn't cost anything to make this a parameter.)
+
+# Gallery
+
+<video width=100% controls autoplay>
+	<source src="/qwy3-video-01.mp4" type="video/mp4">
+	Video of some Qwy3 block entities being thrown around a flat world.
+</video>
+
+![Image of some Qwy3 world.](/qwy3-17.png)
+![Image of some Qwy3 world.](/qwy3-18.png)
+![Image of some Qwy3 world.](/qwy3-19.png)
+![Image of some Qwy3 world.](/qwy3-20.png)
+![Image of some Qwy3 world.](/qwy3-21.png)
+![Image of some Qwy3 world.](/qwy3-22.png)
+![Image of some Qwy3 world.](/qwy3-23.png)
+![Image of some Qwy3 world.](/qwy3-24.png)
+![Image of some Qwy3 world.](/qwy3-25.png)
 
 # On interesting and fast terrain generation
 
@@ -192,15 +210,3 @@ Still in a flat world, the loaded area prioritizes the ground first:
 Low priority front chunks generate with a much lower probability than hight priority chunks (so as to have a chance to stumble early of land that was predicted as air). Once there is no high priority front to load anymore, all the low priority front chunks are moved to the hight priority, so that one layer of air is now to load, and then the next, etc. as can be seen here:
 
 ![Image of the loaded area which loads the air in layers.](/qwy3-16.png)
-
-# Gallery
-
-![Image of some Qwy3 world.](/qwy3-17.png)
-![Image of some Qwy3 world.](/qwy3-18.png)
-![Image of some Qwy3 world.](/qwy3-19.png)
-![Image of some Qwy3 world.](/qwy3-20.png)
-![Image of some Qwy3 world.](/qwy3-21.png)
-![Image of some Qwy3 world.](/qwy3-22.png)
-![Image of some Qwy3 world.](/qwy3-23.png)
-![Image of some Qwy3 world.](/qwy3-24.png)
-![Image of some Qwy3 world.](/qwy3-25.png)
