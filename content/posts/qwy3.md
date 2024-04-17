@@ -42,6 +42,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 ![Image of some Qwy3 world.](/qwy3-17.png)
 ![Image of some Qwy3 world.](/qwy3-18.png)
 ![Image of some Qwy3 world.](/qwy3-19.png)
+![Image of some Qwy3 world.](/qwy3-26.png)
 ![Image of some Qwy3 world.](/qwy3-20.png)
 ![Image of some Qwy3 world.](/qwy3-21.png)
 ![Image of some Qwy3 world.](/qwy3-22.png)
