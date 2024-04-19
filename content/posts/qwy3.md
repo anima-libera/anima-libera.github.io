@@ -15,10 +15,12 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 
 - Infinite world in all directions including up and down, thanks to cubic chunks.
 - Chunk meshing with covered face culling and ambiant occlusion trick.
+- Palette compression for chunk blocks (with palette indices being stored on as few bits as possible).
 - Multiple procedural terrain generators. Some use a custom structure generation engine that is fast and can handle large structures while keeping the world independent from chunk loading order (see the generator `structures-links-smooth`).
 - Home made N-dimensional noise computation (a bit more optimized than the [noizebra]({{< ref "posts/noizebra" >}}) implementation).
 - Optimized chunk loading order that culls away covered and inaccessible chunks and prioritize terrain over air.
 - Blocks can be placed and removed.
+- Blocks can also be thrown.
 - Saving/loading to/from disk, named saves.
 - AABB vs voxels simple but working collision resolution for the player.
 - Entities (in the form of falling blocks for now) that are rendered fast (instanced rendering, with per-instance texturing by indexing in a texture mapping table), saved/loaded without loss or duplication.
