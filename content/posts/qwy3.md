@@ -52,6 +52,10 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 ![Image of some Qwy3 world.](/qwy3-24.png)
 ![Image of some Qwy3 world.](/qwy3-25.png)
 
+WIP entities that are not blocks:
+
+![Image of some Qwy3 world.](/qwy3-27.png)
+
 # On interesting and fast terrain generation
 
 ## Using noise
