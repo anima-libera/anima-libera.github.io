@@ -36,13 +36,9 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 
 # Gallery
 
-<video width=100% controls autoplay>
-	<source src="/qwy3-video-01.mp4" type="video/mp4">
-	Video of some Qwy3 block entities being thrown around a flat world.
-</video>
-
 ![Image of some Qwy3 world.](/qwy3-28.png)
 
+A video:
 <video width=100% controls autoplay>
 	<source src="/qwy3-video-02.mp4" type="video/mp4">
 	Video of some Qwy3 rolling ball animals in a world.
@@ -51,6 +47,13 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 ![Image of some Qwy3 world.](/qwy3-17.png)
 ![Image of some Qwy3 world.](/qwy3-18.png)
 ![Image of some Qwy3 world.](/qwy3-19.png)
+
+Also a video:
+<video width=100% controls autoplay>
+	<source src="/qwy3-video-01.mp4" type="video/mp4">
+	Video of some Qwy3 block entities being thrown around a flat world.
+</video>
+
 ![Image of some Qwy3 world.](/qwy3-26.png)
 ![Image of some Qwy3 world.](/qwy3-20.png)
 ![Image of some Qwy3 world.](/qwy3-21.png)
