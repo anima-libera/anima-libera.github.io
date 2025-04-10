@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/home/anima/Code/Web/portfolio",
+	"sourceRoot": "/mnt/Ubuntu/home/anima/Code/Web/anima-libera",
 	"sources": [
 		"themes/ficurinia/assets/scss/style.scss"
 	],

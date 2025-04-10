@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>C on Anima&#39;s Portfolio</title>
+    <link>http://localhost:1313/tags/c/</link>
+    <description>Recent content in C on Anima&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anima</copyright>
+    <lastBuildDate>Wed, 06 Mar 2024 18:51:08 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/c/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/favicon.svg</icon>
+    
+    
+    <item>
+      <title>IPSYS - Particle system with nice random laws in C &amp; OpenGL</title>
+      <link>http://localhost:1313/posts/ipsys/</link>
+      <pubDate>Wed, 06 Mar 2024 18:51:08 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/ipsys/</guid>
+      <description><![CDATA[<p>Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intresting.</p>
+<p><a href="https://github.com/anima-libera/ipsys">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Particle system that runs on the GPU in a compute shader.</li>
+<li>Different particle types, the number of which is decided at launch time.</li>
+<li>Interaction laws for each oriented pair of particle types:
+<ul>
+<li>The interaction laws depend on the distance between the interactee and the interacter particles.</li>
+<li>There are multiple laws for each oridented pair:
+<ul>
+<li>A law that dictates attraction/repultion,</li>
+<li>a law that dictates rotation to the left/right, and</li>
+<li>a law that dictates acceleration/deceleration.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Interaction law randomizer, carefully tweaked to maximize &ldquo;intresting&rdquo; results occurences.</li>
+<li>Randomized colors for each partcile type, color changing with speed and pressure (number of overlaping other particles).</li>
+<li>Fading effect that leaves a tail behind particles</li>
+<li>Saving/loading to/from disk laws, colors and state, written in a custom file format.</li>
+<li>Grounds for a widget tree that is actually be maintainable in C.</li>
+</ul>
+<h1 id="a-few-gifs">A few gifs</h1>
+<p><img src="/ipsys-01.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-37.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-38.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-39.gif" alt="Gif of an Ipsys system."></p>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/ipsys-saves-01.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-22.png" alt="Image of an Ipsys system."></p>
+<p><img src="/ipsys-00.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-22.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-23.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-24.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-25.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-26.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-27.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-28.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-29.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-30.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-31.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-32.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-33.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-34.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-35.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-36.png" alt="Image of an Ipsys system."></p>
+]]></description>
+      
+        <media:thumbnail url="http://localhost:1313/ipsys-saves-21.png" />
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Custom Build System for C/C&#43;&#43; in Python</title>
+      <link>http://localhost:1313/posts/buildsystem/</link>
+      <pubDate>Wed, 06 Mar 2024 18:50:08 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/buildsystem/</guid>
+      <description><![CDATA[<p>Handmade build system for C/C++ executable projects, made in Python.</p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Creating new source files warrant no modification of the build system.</li>
+<li>Incremental compilation, keeps artifacts and recompile only the translation units that have changed.</li>
+<li>Parses source files for <code>#include</code>s to make an inclusion graph and propagate changes in headers down the graph to flag all concerned translation units for recompilation correctly.</li>
+<li>The inclusion graph can be converted to a DOT file.</li>
+<li>Allows a special header to contain special custom declarations that trigger code generation to embed text/binary ressources in the binary.</li>
+<li>Allows to run the compiled binary after compilation, but only if compilation worked.</li>
+<li>Different compilation options produce artifacts that are stored separately so as to reproduce compilation profiles.</li>
+<li>Easy to tweak to the needs of the project, that was the whole point of making a custom build system.</li>
+</ul>
+<h1 id="why-why-not-just-use-cmake-or-make">Why? Why not just use CMake or Make?</h1>
+<p>The standard for C and C++ projects is to use CMake, or sometimes just Make. Some benefits are to be gained from such decision, for example some features such as parallel compilation, or the fact that some libraries include a bit of CMake script that is meant to ease its use as a dependency in CMake projects.</p>
+<p>In my humble opinion, these benefits do not outweight the inconvenience of how hard it is to understand the obscure ways by which these build systems are indended to be used and configured. If it is quite easy to get them to work on a project by copy-pasting the words of power from StackOverflow into our project, it often remains too mysterious (at least for me) to troubleshoot issues or tweak.</p>
+<p>In the end, the build system for a project is just a program that handles the efficient management of the compiling process. I understand that some domain specific language can make the writing and maintenance of such program easier by providing language features related to file and compilation handling. I do not think that being a domain specific language is an excuse to be so uncomfortable and hard to use as the DSLs of CMake and Make. Using a more classic general purpose programming language such as Python is so much nicer, with the small price of having to reimplement some features by hand.</p>
+<p>The build system is an important detail of a C/C++ project; a detail, but an important one. I felt more confident in the future of these projects knowing that I fully understood the build system and could tweak/augment/fix it to make it fit to the needs of the project. Using a proper language also allows to augment the build system with features such as code generation, that I believe even a master of CMake script would have a hard time to implement in such an impractical language.</p>
+<p><em>Note</em>: This custom build system was used on personal hobby projects, where I thought it made sense. In a team of enough people, the fact that some solution is an industry standard makes it more relevant due to being known (to some extent) by all the team. I may find it intresting to design a custom writing system if there were no other humans to read it, but since there are other humans to communicate with then the standard writing system shared by everyone has more value.</p>
+<h1 id="where-is-it-used">Where is it used?</h1>
+<p>There is no standalone version of this build system, it was copy-pasted in new projects and tweaked accordingly.</p>
+<ul>
+<li><a href="https://github.com/anima-libera/qwy2/tree/6be3c50bba2e2fcde6e47e67a4b8273bd836b2ce/buildsystem">Here</a> it is used in <a href="http://localhost:1313/posts/qwy2/">Qwy2</a> (C++ project), one can see the use of code generation triggered by the special declarations in <a href="https://github.com/anima-libera/qwy2/blob/6be3c50bba2e2fcde6e47e67a4b8273bd836b2ce/src/embedded.hpp">this special header</a> to embed some ressources in the binary.</li>
+</ul>
+<p>The other projects it was used in did not make it to this portfolio due to not being presentable enough due to being abandoned too soon.</p>
+<ul>
+<li><a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/tree/13c518f35dc117efe8e8cde31050be757cac7a6a/buildsystem">Here</a> it is used in an abandoned C project that I happened to have posted on GitHub, with the code generation for ressource embedding being triggered by <a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/blob/13c518f35dc117efe8e8cde31050be757cac7a6a/src/embedded.h">this special header</a>.</li>
+</ul>
+]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Spine - Compiled stack-based language implemented in C then Rust</title>
+      <link>http://localhost:1313/posts/spine/</link>
+      <pubDate>Wed, 06 Mar 2024 18:47:08 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/spine/</guid>
+      <description><![CDATA[<p>Compiler of a stack-based simple language down to ELF executable with x86_64 machine code generated by handwritten code (no assembly), which works! First started in C, then a rewrite in Rust was started with better abstractions.</p>
+<p><a href="https://github.com/anima-libera/spine-lang">GitHub repository of the C version</a>
+<a href="https://github.com/anima-libera/spine">GitHub repository of the Rust attempt</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Generates working ELF executables with generated x86_64 machine code.
+<ul>
+<li>ELF headers generator.</li>
+<li>Machine code generator for some x86_64 instructions, no assembly.</li>
+<li>Data segment, code segment, labels with offsets corrected during final ELF generation.</li>
+</ul>
+</li>
+<li>Simple stack-based language, <em>C version only</em> for now:
+<ul>
+<li>One-character instructions with no whitespace separation required, for <a href="https://en.wikipedia.org/wiki/Code_golf">golfing</a> purposes.</li>
+<li>Control flow with ifs, loops, callbacks and named functions.</li>
+<li>Classic stack manipulations instructions.</li>
+<li>Support of two local valriables (only two for declaration with less characters for golfing) which can be &ldquo;runtime-shadowed&rdquo; or not in each function or callback.</li>
+<li>Separated the call stack from the data stack (even though x86_64 only have one stack for both).</li>
+<li>Pointer dereferecing read and write operations.</li>
+<li>Syscall instruction, which provides lots of freedom.</li>
+</ul>
+</li>
+</ul>
+<h1 id="gallery">Gallery</h1>
+<p>Here is a Spine program (C implementation) that prints <code>argc</code>, all of <code>argv</code> and then all of <code>envp</code> (the environment variables), all of which is on the stack at the start of program execution on Linux. <code>N</code> is a function that prints an integer in base 10, <code>S</code> prints a Spine string (pointer and length, which are what is pushed by Spine string literals), and <code>Z</code> print null-terminated string (or C strings, which are how <code>argv</code> and <code>envp</code> are provided).</p>
+<p><img src="/spine-01.png" alt="Image of a Spine program printing argc, argv and envp."></p>
+<p>Here are some Spine named functions. <code>N</code> is different from the version above as it uses the local variables (<code>h</code> and <code>v</code>) to have a shorter code. <code>S</code> uses the fact that the write syscall takes the length of a string to do only one syscall. <code>M</code> allocates memory from the OS via the <code>mmap</code> syscall (one of the intended uses of this syscall).</p>
+<p><img src="/spine-02.png" alt="Image of some Spine named functions."></p>
+<h1 id="why">Why?</h1>
+<p>For fun!</p>
+<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>
+]]></description>
+      
+        <media:thumbnail url="http://localhost:1313/spine-02.png" />
+      
+    </item>
+    
+    
+  </channel>
+</rss>

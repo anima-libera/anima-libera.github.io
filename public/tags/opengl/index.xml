@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>OpenGL on Anima&#39;s Portfolio</title>
+    <link>http://localhost:1313/tags/opengl/</link>
+    <description>Recent content in OpenGL on Anima&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anima</copyright>
+    <lastBuildDate>Wed, 06 Mar 2024 18:53:08 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/opengl/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/favicon.svg</icon>
+    
+    
+    <item>
+      <title>Qwy2 - Previous Minecraft-like attempt in C&#43;&#43; &amp; OpenGL</title>
+      <link>http://localhost:1313/posts/qwy2/</link>
+      <pubDate>Wed, 06 Mar 2024 18:53:08 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/qwy2/</guid>
+      <description><![CDATA[<p>The previous Minecraft-like attempt before <a href="http://localhost:1313/posts/qwy3/">Qwy3</a>.</p>
+<p><a href="https://github.com/anima-libera/qwy2">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Infinite world in all directions including up and down, thanks to cubic chunks.</li>
+<li>Chunk meshing with covered face culling and ambiant occlusion trick.</li>
+<li>Multiple procedural terrain generators.</li>
+<li>Home made noise computation with up to 3 floating point dimensions and 1 integer dimpension.</li>
+<li>Blocks can be placed and removed.</li>
+<li>Saving/loading to/from named saves on disk. Can save every generated chunks or only the ones that underwent change.</li>
+<li>Threadpool for terrain generation (different steps in different tasks), loading from disk, initial meshing (but not remeshing).</li>
+<li>Grounds for entities (some throwable spinning crystals as tests are implemented).</li>
+<li>Dynamic shadows by shadow mapping (not cascading).</li>
+<li>Fog effect (that only works because the sky is one uniform color instead of an arbitrary skybox).</li>
+<li>Procedurally generated block textures (less intresting than Qwy3&rsquo;s).</li>
+<li>Configurable controls for most controls.</li>
+<li>Grounds for a stripting language.</li>
+<li>Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn&rsquo;t cost anything to make this a parameter.)</li>
+<li><a href="http://localhost:1313/posts/buildsystem/">Custom build system</a> for better control of the build process, with code generation for ressource embedding.</li>
+</ul>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/qwy2-01.png" alt="Image of some Qwy2 world with the classic generator.">
+<img src="/qwy2-02.png" alt="Image of some Qwy2 world with a sky lines biome near a solid biome.">
+<img src="/qwy2-03.png" alt="Image of some Qwy2 world with two biomes near some empty sky.">
+<img src="/qwy2-04.png" alt="Image of some Qwy2 world with multiple biomes.">
+<img src="/qwy2-05.png" alt="Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue."></p>
+<h1 id="why-the-qwy3-rewrite">Why the Qwy3 rewrite?</h1>
+<p>Since learning <a href="https://www.rust-lang.org/">Rust</a> (memory safe, no undefined behavior, super clean language features and type system, <a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">fearless concurrency (!)</a>, standard package manager, etc.) and hearing about <a href="https://wgpu.rs/">Wgpu</a> (<em>safe graphics API</em> implemented in Rust, <a href="https://www.w3.org/TR/WGSL/">WGSL</a> (clean shader language), Vulkan backend to use its validation layers), I thought more and more about the state of Qwy2, stuck with old technologies (C++ and OpenGL, full of undefined behavior, legacy and inelegant features) and how much easier the development would have been if it was made in Rust &amp; Wgpu since the beginning. In addition, I was unhappy with some technical decisions made for Qwy2 (for example the fact that there are multiple generation steps for each chunks, making generation very slow), and a rewrite would allow to benefit from these mistakes to make it better.</p>
+<p>So far, I believe that the <a href="http://localhost:1313/posts/qwy3/">Qwy3</a> rewrite in Rust &amp; Wgpu was the best decision regarding this project. Qwy2 shall remain in its unfinished state as the previous iteration of Qwy3. Third time&rsquo;s a charm!</p>
+]]></description>
+      
+        <media:thumbnail url="http://localhost:1313/qwy2-00.png" />
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>IPSYS - Particle system with nice random laws in C &amp; OpenGL</title>
+      <link>http://localhost:1313/posts/ipsys/</link>
+      <pubDate>Wed, 06 Mar 2024 18:51:08 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/ipsys/</guid>
+      <description><![CDATA[<p>Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intresting.</p>
+<p><a href="https://github.com/anima-libera/ipsys">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Particle system that runs on the GPU in a compute shader.</li>
+<li>Different particle types, the number of which is decided at launch time.</li>
+<li>Interaction laws for each oriented pair of particle types:
+<ul>
+<li>The interaction laws depend on the distance between the interactee and the interacter particles.</li>
+<li>There are multiple laws for each oridented pair:
+<ul>
+<li>A law that dictates attraction/repultion,</li>
+<li>a law that dictates rotation to the left/right, and</li>
+<li>a law that dictates acceleration/deceleration.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Interaction law randomizer, carefully tweaked to maximize &ldquo;intresting&rdquo; results occurences.</li>
+<li>Randomized colors for each partcile type, color changing with speed and pressure (number of overlaping other particles).</li>
+<li>Fading effect that leaves a tail behind particles</li>
+<li>Saving/loading to/from disk laws, colors and state, written in a custom file format.</li>
+<li>Grounds for a widget tree that is actually be maintainable in C.</li>
+</ul>
+<h1 id="a-few-gifs">A few gifs</h1>
+<p><img src="/ipsys-01.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-37.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-38.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-39.gif" alt="Gif of an Ipsys system."></p>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/ipsys-saves-01.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-22.png" alt="Image of an Ipsys system."></p>
+<p><img src="/ipsys-00.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-22.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-23.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-24.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-25.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-26.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-27.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-28.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-29.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-30.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-31.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-32.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-33.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-34.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-35.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-36.png" alt="Image of an Ipsys system."></p>
+]]></description>
+      
+        <media:thumbnail url="http://localhost:1313/ipsys-saves-21.png" />
+      
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/favicon.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Noizebra - Handmade noise and experiments in Rust  &ndash;
+        
+        Anima&#39;s Portfolio
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.9cbbae7ea584f9d0b823365a1be38866efc66a8ac6d693f61de4116c3145b86f256fea93ba492d5b457456651bc48386a13b8d79b2d43838be1cce257b8b8125.css integrity="sha512-nLuufqWE&#43;dC4IzZaG&#43;OIZu/GaorG1pP2HeQRbDFFuG8lb&#43;qTukktW0V0VmUbxIOGoTuNebLUODi&#43;HM4le4uBJQ==" /><style>
+	:root {
+		--accent: #e385ff;
+	}
+	h1, h2, h3, h4, h5 {
+		color: var(--accent);
+	}
+	:root {
+		--light_accent: var(--accent);
+		--dark_accent: var(--accent);
+		--default_accent: var(--accent);
+	}
+</style>
+<meta name="author" content="Anima" />
+
+    
+        <meta name="keywords" content='Rust' />
+    
+    
+        <meta name="description" content="he noise implementation of &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;, and a collection of experiments with the noise to discover ways to manipulate it into intresting or desired shapes (&lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt; also uses that experience).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anima-libera/noizebra&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;features&#34;&gt;Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Unoptimized prototype implementation of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Value_noise&#34;&gt;value noise&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Octaves wrapper around the noise.&lt;/li&gt;
+&lt;li&gt;The noise is N-dimensional, accepting any number of floating point and integer parameters.&lt;/li&gt;
+&lt;li&gt;A collection of experiments on ways to manipulate and shape the noise into images, to serve as prototypes for procedural generation in &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;gallery&#34;&gt;Gallery&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;/noizebra-01.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-02.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-03.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-04.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-05.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-06.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-07.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-08.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-09.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-10.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-11.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-12.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-13.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-14.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-15.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-16.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-17.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-18.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-19.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;
+&lt;img src=&#34;/noizebra-20.png&#34; alt=&#34;Image of a Noizebra output.&#34;&gt;&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Anima&#39;s Portfolio' />
+
+    <meta property="og:title" content="Noizebra - Handmade noise and experiments in Rust" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Anima" />
+    
+    <meta
+        property="article:published_time"
+        content='2024-03-06T18:52:08Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="Rust" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/noizebra/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://localhost:1313/noizebra-00.png" />
+    
+        <meta property="og:description" content="&lt;p&gt;A prototype for the noise implementation of &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;, and a collection of experiments with the noise to discover " />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/noizebra/" />
+
+
+    <meta name="twitter:title" content="Noizebra - Handmade noise and experiments in Rust" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/noizebra-00.png" />
+    
+        <meta name="twitter:description" content="&lt;p&gt;A prototype for the noise implementation of &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;, and a collection of experiments with the noise to discover " />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/favicon.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Anima&#39;s Portfolio</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://localhost:1313/pages/aboutme/">
+                About me
+            </a></li>
+        
+        
+            <li><a href="/cv-jeanne.pdf">CV</a></li>
+        
+            <li><a href="/rec-letter-jeanne.pdf">Letter of recommendation (fr)</a></li>
+        
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="links">
+        
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/anima-libera">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://discordapp.com/users/430844208228597760">
+    
+    
+        &#xf1ff;
+    
+    <span>
+        Discord
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Noizebra - Handmade noise and experiments in Rust</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-03-06
+
+
+        </p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/noizebra-00.png" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>A prototype for the noise implementation of <a href="http://localhost:1313/posts/qwy3/">Qwy3</a>, and a collection of experiments with the noise to discover ways to manipulate it into intresting or desired shapes (<a href="http://localhost:1313/posts/qwy3/">Qwy3</a> also uses that experience).</p>
+<p><a href="https://github.com/anima-libera/noizebra">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Unoptimized prototype implementation of a <a href="https://en.wikipedia.org/wiki/Value_noise">value noise</a>.</li>
+<li>Octaves wrapper around the noise.</li>
+<li>The noise is N-dimensional, accepting any number of floating point and integer parameters.</li>
+<li>A collection of experiments on ways to manipulate and shape the noise into images, to serve as prototypes for procedural generation in <a href="http://localhost:1313/posts/qwy3/">Qwy3</a>.</li>
+</ul>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/noizebra-01.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-02.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-03.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-04.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-05.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-06.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-07.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-08.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-09.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-10.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-11.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-12.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-13.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-14.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-15.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-16.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-17.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-18.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-19.png" alt="Image of a Noizebra output.">
+<img src="/noizebra-20.png" alt="Image of a Noizebra output."></p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/rust/">#Rust</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2025 &copy; Anima
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

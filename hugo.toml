@@ -5,7 +5,7 @@ title = "Anima's Portfolio"
 theme = "ficurinia"
 copyright = "Anima"
 
-paginate = 99
+pagination = { pagerSize = 99 }
 summaryLength = 60
 
 # Theme: https://themes.gohugo.io/themes/hugo-ficurinia/

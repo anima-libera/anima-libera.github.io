@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/favicon.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Push Dungeon - Roguelike with sokoban-like mechanics in Rust  &ndash;
+        
+        Anima&#39;s Portfolio
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.9cbbae7ea584f9d0b823365a1be38866efc66a8ac6d693f61de4116c3145b86f256fea93ba492d5b457456651bc48386a13b8d79b2d43838be1cce257b8b8125.css integrity="sha512-nLuufqWE&#43;dC4IzZaG&#43;OIZu/GaorG1pP2HeQRbDFFuG8lb&#43;qTukktW0V0VmUbxIOGoTuNebLUODi&#43;HM4le4uBJQ==" /><style>
+	:root {
+		--accent: #e385ff;
+	}
+	h1, h2, h3, h4, h5 {
+		color: var(--accent);
+	}
+	:root {
+		--light_accent: var(--accent);
+		--dark_accent: var(--accent);
+		--default_accent: var(--accent);
+	}
+</style>
+<meta name="author" content="Anima" />
+
+    
+        <meta name="keywords" content='Rust' />
+    
+    
+        <meta name="description" content="n a procedurally generated square-tiled grid with turn-based sokoban-like mechanics. Instead of winning by grinding and having high enough stats, what if we fight by carefully controlling the layout like we win in a sokoban-like puzzle game? Push and pull objects on the grid, anticipate or even bait the enemies in a position in which you win, avoid getting cornered or blocked as the &amp;ldquo;redo&amp;quot;s (points spent to cancel actions) are limited and as precious as HP, if not more. Death can be undone if there are enough reods left to get back in a non-losing position.&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Anima&#39;s Portfolio' />
+
+    <meta property="og:title" content="Push Dungeon - Roguelike with sokoban-like mechanics in Rust" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Anima" />
+    
+    <meta
+        property="article:published_time"
+        content='2024-03-06T18:49:08Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="Rust" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/pushdg/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://localhost:1313/pushdg-03.png" />
+    
+        <meta property="og:description" content="&lt;p&gt;Dungeon crawler on a procedurally generated square-tiled grid with turn-based sokoban-like mechanics. Instead of winning by grinding and having high enough s" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/pushdg/" />
+
+
+    <meta name="twitter:title" content="Push Dungeon - Roguelike with sokoban-like mechanics in Rust" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/pushdg-03.png" />
+    
+        <meta name="twitter:description" content="&lt;p&gt;Dungeon crawler on a procedurally generated square-tiled grid with turn-based sokoban-like mechanics. Instead of winning by grinding and having high enough s" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/favicon.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Anima&#39;s Portfolio</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://localhost:1313/pages/aboutme/">
+                About me
+            </a></li>
+        
+        
+            <li><a href="/cv-jeanne.pdf">CV</a></li>
+        
+            <li><a href="/rec-letter-jeanne.pdf">Letter of recommendation (fr)</a></li>
+        
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="links">
+        
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/anima-libera">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://discordapp.com/users/430844208228597760">
+    
+    
+        &#xf1ff;
+    
+    <span>
+        Discord
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Push Dungeon - Roguelike with sokoban-like mechanics in Rust</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-03-06
+
+
+        </p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/pushdg-03.png" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>Dungeon crawler on a procedurally generated square-tiled grid with turn-based sokoban-like mechanics. Instead of winning by grinding and having high enough stats, what if we fight by carefully controlling the layout like we win in a sokoban-like puzzle game? Push and pull objects on the grid, anticipate or even bait the enemies in a position in which you win, avoid getting cornered or blocked as the &ldquo;redo&quot;s (points spent to cancel actions) are limited and as precious as HP, if not more. Death can be undone if there are enough reods left to get back in a non-losing position.</p>
+<p><a href="https://github.com/anima-libera/pushdg">GitHub repository</a></p>
+<h1 id="the-idea">The idea</h1>
+<p>Instead of having objects in an inventory and being decribed by a wall of stat numbers, here the objects are on the grid and must be pushed or pulled around in a sokoban-like fashion and the stats are replaced by the unique properties of objects.</p>
+<p>Agents (the player, the enemies, anything that moves on its own) has a force (for now, 2) that allows them to push at most a equal mass in one move. A rock has a mass of 1 (like most objects), so the player may push at most 2 rocks in one move. The walls are too heavy to be pushed. The enemies and the player are also too heavy to be pushed, so instead of pushing eachother around they must hit each other to lower the other&rsquo;s HP to 0. When pushing fails, objects in the attempted push chain try to interact with what they were pushed against and this may result in a hit if a target has HP and can take damages.</p>
+<p>Carefully organizing the layout of a battle to put the enemy in a losing position is the way to go in Push Dungeon. Taking a few hits is fine (there are regen hearts to find), making a few mistakes is fine (it may cost redos, but there are also redo hearts to find), but making too many miskates without enough redos may lead to an unescapable position, which is how a puzzle game with limited redos is lost.</p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Procedural generation of messy dungeon-like maps which often happen to be intresting to play in.</li>
+<li>Multiple objects with different mechanics (key to open doors, vision-blocking walls and pushable bush, see-through gem, shield that deals no damages, sword that deals more damages, pickaxe to break walls, rope that is pullable and can pull an other object, etc.).</li>
+<li>Simple animations when objects move or are moved, damage number simple animations.</li>
+<li>Enemies with a simple move heuristic which already provide intresting challenges when in great numbers and depending on the layout.</li>
+</ul>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/pushdg-01.png" alt="Image of some Push Dungeon game.">
+<img src="/pushdg-02.png" alt="Image of some Push Dungeon game.">
+<img src="/pushdg-04.png" alt="Image of some Push Dungeon game.">
+<img src="/pushdg-05.png" alt="Image of some Push Dungeon game."></p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/rust/">#Rust</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2025 &copy; Anima
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

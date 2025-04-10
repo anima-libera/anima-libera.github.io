@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/favicon.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Qwy2 - Previous Minecraft-like attempt in C&#43;&#43; &amp; OpenGL  &ndash;
+        
+        Anima&#39;s Portfolio
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.9cbbae7ea584f9d0b823365a1be38866efc66a8ac6d693f61de4116c3145b86f256fea93ba492d5b457456651bc48386a13b8d79b2d43838be1cce257b8b8125.css integrity="sha512-nLuufqWE&#43;dC4IzZaG&#43;OIZu/GaorG1pP2HeQRbDFFuG8lb&#43;qTukktW0V0VmUbxIOGoTuNebLUODi&#43;HM4le4uBJQ==" /><style>
+	:root {
+		--accent: #e385ff;
+	}
+	h1, h2, h3, h4, h5 {
+		color: var(--accent);
+	}
+	:root {
+		--light_accent: var(--accent);
+		--dark_accent: var(--accent);
+		--default_accent: var(--accent);
+	}
+</style>
+<meta name="author" content="Anima" />
+
+    
+        <meta name="keywords" content='C&#43;&#43;, OpenGL' />
+    
+    
+        <meta name="description" content="craft-like attempt before &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anima-libera/qwy2&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;features&#34;&gt;Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Infinite world in all directions including up and down, thanks to cubic chunks.&lt;/li&gt;
+&lt;li&gt;Chunk meshing with covered face culling and ambiant occlusion trick.&lt;/li&gt;
+&lt;li&gt;Multiple procedural terrain generators.&lt;/li&gt;
+&lt;li&gt;Home made noise computation with up to 3 floating point dimensions and 1 integer dimpension.&lt;/li&gt;
+&lt;li&gt;Blocks can be placed and removed.&lt;/li&gt;
+&lt;li&gt;Saving/loading to/from named saves on disk. Can save every generated chunks or only the ones that underwent change.&lt;/li&gt;
+&lt;li&gt;Threadpool for terrain generation (different steps in different tasks), loading from disk, initial meshing (but not remeshing).&lt;/li&gt;
+&lt;li&gt;Grounds for entities (some throwable spinning crystals as tests are implemented).&lt;/li&gt;
+&lt;li&gt;Dynamic shadows by shadow mapping (not cascading).&lt;/li&gt;
+&lt;li&gt;Fog effect (that only works because the sky is one uniform color instead of an arbitrary skybox).&lt;/li&gt;
+&lt;li&gt;Procedurally generated block textures (less intresting than Qwy3&amp;rsquo;s).&lt;/li&gt;
+&lt;li&gt;Configurable controls for most controls.&lt;/li&gt;
+&lt;li&gt;Grounds for a stripting language.&lt;/li&gt;
+&lt;li&gt;Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn&amp;rsquo;t cost anything to make this a parameter.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/posts/buildsystem/&#34;&gt;Custom build system&lt;/a&gt; for better control of the build process, with code generation for ressource embedding.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;gallery&#34;&gt;Gallery&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;/qwy2-01.png&#34; alt=&#34;Image of some Qwy2 world with the classic generator.&#34;&gt;
+&lt;img src=&#34;/qwy2-02.png&#34; alt=&#34;Image of some Qwy2 world with a sky lines biome near a solid biome.&#34;&gt;
+&lt;img src=&#34;/qwy2-03.png&#34; alt=&#34;Image of some Qwy2 world with two biomes near some empty sky.&#34;&gt;
+&lt;img src=&#34;/qwy2-04.png&#34; alt=&#34;Image of some Qwy2 world with multiple biomes.&#34;&gt;
+&lt;img src=&#34;/qwy2-05.png&#34; alt=&#34;Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue.&#34;&gt;&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Anima&#39;s Portfolio' />
+
+    <meta property="og:title" content="Qwy2 - Previous Minecraft-like attempt in C&#43;&#43; &amp; OpenGL" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Anima" />
+    
+    <meta
+        property="article:published_time"
+        content='2024-03-06T18:53:08Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="C&#43;&#43;" />
+        
+            <meta property="article:tag" content="OpenGL" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/qwy2/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://localhost:1313/qwy2-00.png" />
+    
+        <meta property="og:description" content="&lt;p&gt;The previous Minecraft-like attempt before &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anima-libera/qwy2&#34;&gt;GitHub" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/qwy2/" />
+
+
+    <meta name="twitter:title" content="Qwy2 - Previous Minecraft-like attempt in C&#43;&#43; &amp; OpenGL" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/qwy2-00.png" />
+    
+        <meta name="twitter:description" content="&lt;p&gt;The previous Minecraft-like attempt before &lt;a href=&#34;http://localhost:1313/posts/qwy3/&#34;&gt;Qwy3&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anima-libera/qwy2&#34;&gt;GitHub" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/favicon.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Anima&#39;s Portfolio</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://localhost:1313/pages/aboutme/">
+                About me
+            </a></li>
+        
+        
+            <li><a href="/cv-jeanne.pdf">CV</a></li>
+        
+            <li><a href="/rec-letter-jeanne.pdf">Letter of recommendation (fr)</a></li>
+        
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="links">
+        
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/anima-libera">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://discordapp.com/users/430844208228597760">
+    
+    
+        &#xf1ff;
+    
+    <span>
+        Discord
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Qwy2 - Previous Minecraft-like attempt in C&#43;&#43; &amp; OpenGL</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-03-06
+
+
+        </p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/qwy2-00.png" alt="" />
+            
+            
+        </figure>
+    
+    <div class="articleToc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#why-the-qwy3-rewrite">Why the Qwy3 rewrite?</a></li>
+  </ul>
+</nav>
+    <hr />
+</div>
+
+    <div><p>The previous Minecraft-like attempt before <a href="http://localhost:1313/posts/qwy3/">Qwy3</a>.</p>
+<p><a href="https://github.com/anima-libera/qwy2">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Infinite world in all directions including up and down, thanks to cubic chunks.</li>
+<li>Chunk meshing with covered face culling and ambiant occlusion trick.</li>
+<li>Multiple procedural terrain generators.</li>
+<li>Home made noise computation with up to 3 floating point dimensions and 1 integer dimpension.</li>
+<li>Blocks can be placed and removed.</li>
+<li>Saving/loading to/from named saves on disk. Can save every generated chunks or only the ones that underwent change.</li>
+<li>Threadpool for terrain generation (different steps in different tasks), loading from disk, initial meshing (but not remeshing).</li>
+<li>Grounds for entities (some throwable spinning crystals as tests are implemented).</li>
+<li>Dynamic shadows by shadow mapping (not cascading).</li>
+<li>Fog effect (that only works because the sky is one uniform color instead of an arbitrary skybox).</li>
+<li>Procedurally generated block textures (less intresting than Qwy3&rsquo;s).</li>
+<li>Configurable controls for most controls.</li>
+<li>Grounds for a stripting language.</li>
+<li>Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn&rsquo;t cost anything to make this a parameter.)</li>
+<li><a href="http://localhost:1313/posts/buildsystem/">Custom build system</a> for better control of the build process, with code generation for ressource embedding.</li>
+</ul>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/qwy2-01.png" alt="Image of some Qwy2 world with the classic generator.">
+<img src="/qwy2-02.png" alt="Image of some Qwy2 world with a sky lines biome near a solid biome.">
+<img src="/qwy2-03.png" alt="Image of some Qwy2 world with two biomes near some empty sky.">
+<img src="/qwy2-04.png" alt="Image of some Qwy2 world with multiple biomes.">
+<img src="/qwy2-05.png" alt="Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue."></p>
+<h1 id="why-the-qwy3-rewrite">Why the Qwy3 rewrite?</h1>
+<p>Since learning <a href="https://www.rust-lang.org/">Rust</a> (memory safe, no undefined behavior, super clean language features and type system, <a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">fearless concurrency (!)</a>, standard package manager, etc.) and hearing about <a href="https://wgpu.rs/">Wgpu</a> (<em>safe graphics API</em> implemented in Rust, <a href="https://www.w3.org/TR/WGSL/">WGSL</a> (clean shader language), Vulkan backend to use its validation layers), I thought more and more about the state of Qwy2, stuck with old technologies (C++ and OpenGL, full of undefined behavior, legacy and inelegant features) and how much easier the development would have been if it was made in Rust &amp; Wgpu since the beginning. In addition, I was unhappy with some technical decisions made for Qwy2 (for example the fact that there are multiple generation steps for each chunks, making generation very slow), and a rewrite would allow to benefit from these mistakes to make it better.</p>
+<p>So far, I believe that the <a href="http://localhost:1313/posts/qwy3/">Qwy3</a> rewrite in Rust &amp; Wgpu was the best decision regarding this project. Qwy2 shall remain in its unfinished state as the previous iteration of Qwy3. Third time&rsquo;s a charm!</p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/c&#43;&#43;/">#C&#43;&#43;</a>
+        
+            <a
+                
+                href="/tags/opengl/">#OpenGL</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2025 &copy; Anima
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

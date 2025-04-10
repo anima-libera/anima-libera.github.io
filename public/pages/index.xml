@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Pages on Anima&#39;s Portfolio</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on Anima&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Anima</copyright>
+    <lastBuildDate>Thu, 07 Mar 2024 03:09:14 +0100</lastBuildDate><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/favicon.svg</icon>
+    
+    
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/pages/aboutme/</link>
+      <pubDate>Thu, 07 Mar 2024 03:09:14 +0100</pubDate>
+      
+      <guid>http://localhost:1313/pages/aboutme/</guid>
+      <description><![CDATA[<h2 id="a-few-games-i-like">A few games I like</h2>
+<ul>
+<li><a href="https://www.wildfrostgame.com/"><em><strong>Wildfrost</strong></em></a> is a cute and clever roguelike deckbuilder. There is so much going on during each turn, uncountable strategies, endlessly replayable! Very different (and in my humble opinion, more fun) than <em>Slay the Spire</em>. Music, vibes, graphics and UX top notch. No meta-progression (as I like) (only unlocks for greater difficulty, which is not the same), so the (absurdly hard) final final boss can only get beaten the hard way, mastering the easy to grasp many mechanics.</li>
+<li><a href="https://noitagame.com/"><em><strong>Noita</strong></em></a> is an unforgiving roguelike platformer. The wand crafting system is so deep, intriguing and intresting that it would be a great game with that alone. The world is big and sprinkled with many secrets. The enemies are varied and definitely not designed to help the player to beat them. 100-200 runs before a first win are to be expected as there is much to learn, but only to learn as there is no meta-progression (as I like) (only a few unlocks here and there). As healing and safety are rare, one shall know great fear and stress followed by intense relief (hopefully ^^).</li>
+<li><a href="https://subsetgames.com/itb.html"><em><strong>Into the Breach</strong></em></a> is a fair roguelike tactical puzzle game. Enemies let us know of their moves in advance so that every turn is like a puzzle to be solved. Multiple units to unlock and no meta-progression (or almost none, the pilot that we choose to follow us from run to run may count as some insignificant meta-progression). On the harder difficulties, every battle will feel like all hope is lost, and sometimes (often) all hopes are indeed lost (but mostly due to skill issues, for the game is fair and can be won consistently by some people (not me &gt;_&lt;)).</li>
+</ul>
+<h2 id="a-few-games-i-like-but-they-have-meta-progression">A few games I like but they have meta-progression</h2>
+<ul>
+<li><a href="https://www.supergiantgames.com/games/hades/"><em><strong>Hades</strong></em></a></li>
+<li><a href="https://lastspell.com/"><em><strong>The Last Spell</strong></em></a></li>
+<li><a href="https://dead-cells.com/"><em><strong>Dead Cells</strong></em></a></li>
+</ul>
+<p>Note that meta-progression is clever game design that guarantees that the player&rsquo;s skill and the game&rsquo;s difficulty eventually cross and make the game beatable. What bothers me on a personnal level is that I don&rsquo;t want the game to get easier and easier, I want to learn and master the mechanics and win by skill and skill alone (and maybe a drop of luck) without doubting that I only won because I farmed the meta-progression enough to bring the difficulty down to my lowly skill.</p>
+<h2 id="a-few-games-that-changed-me">A few games that changed me</h2>
+<ul>
+<li><a href="https://minecraft.wiki/w/Minecraft"><em><strong>Minecraft</strong></em></a> is an infinite voxel world in which we can survive and thrive, explore and create. Oh, the time I spent in these lands&hellip; After playing <em>so much</em> of this game, I could not but dream of &ldquo;making my own Minecraft&rdquo;, this is basically why I started to program. My past self was sad that it actually took more than a week after learning about loops and variables to be able to make a Minecraft-like, but I am getting there now, and that dream never left me. Minecraft carved itself in my life-scale ultimate goals by being so great.</li>
+<li><a href="https://undertale.com"><em><strong>Undertale</strong></em></a> is an RPG famous for its top-tier characters, story and music. The first game the story of which I felt greater than any game story before. I cried and laughed and cried again with and along the characters and the multiple story routes that the game offers. I have yet to find an other game that tells a more intense story, or a story that is telled via more instense manner.</li>
+<li><a href="https://www.celestegame.com"><em><strong>Celeste</strong></em></a> is a try-hard plateformer of stunning graphics and music. Difficult, then even more difficult, and then even more&hellip; But it is worth the effort, to get to see Madeline overcome her troubles up to the summit, granting feelings of accomplishment like nothing else ever could, leaving many lasting memories. :3</li>
+</ul>
+<h2 id="a-few-games-i-feel-nostalgic-about">A few games I feel nostalgic about</h2>
+<ul>
+<li><em><strong>Super Mario Galaxy</strong></em></li>
+<li><em><strong>New Super Mario Bros.</strong></em></li>
+</ul>
+]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/favicon.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            IPSYS - Particle system with nice random laws in C &amp; OpenGL  &ndash;
+        
+        Anima&#39;s Portfolio
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.9cbbae7ea584f9d0b823365a1be38866efc66a8ac6d693f61de4116c3145b86f256fea93ba492d5b457456651bc48386a13b8d79b2d43838be1cce257b8b8125.css integrity="sha512-nLuufqWE&#43;dC4IzZaG&#43;OIZu/GaorG1pP2HeQRbDFFuG8lb&#43;qTukktW0V0VmUbxIOGoTuNebLUODi&#43;HM4le4uBJQ==" /><style>
+	:root {
+		--accent: #e385ff;
+	}
+	h1, h2, h3, h4, h5 {
+		color: var(--accent);
+	}
+	:root {
+		--light_accent: var(--accent);
+		--dark_accent: var(--accent);
+		--default_accent: var(--accent);
+	}
+</style>
+<meta name="author" content="Anima" />
+
+    
+        <meta name="keywords" content='C, OpenGL' />
+    
+    
+        <meta name="description" content="article system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intresting.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anima-libera/ipsys&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;features&#34;&gt;Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Particle system that runs on the GPU in a compute shader.&lt;/li&gt;
+&lt;li&gt;Different particle types, the number of which is decided at launch time.&lt;/li&gt;
+&lt;li&gt;Interaction laws for each oriented pair of particle types:
+&lt;ul&gt;
+&lt;li&gt;The interaction laws depend on the distance between the interactee and the interacter particles.&lt;/li&gt;
+&lt;li&gt;There are multiple laws for each oridented pair:
+&lt;ul&gt;
+&lt;li&gt;A law that dictates attraction/repultion,&lt;/li&gt;
+&lt;li&gt;a law that dictates rotation to the left/right, and&lt;/li&gt;
+&lt;li&gt;a law that dictates acceleration/deceleration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Interaction law randomizer, carefully tweaked to maximize &amp;ldquo;intresting&amp;rdquo; results occurences.&lt;/li&gt;
+&lt;li&gt;Randomized colors for each partcile type, color changing with speed and pressure (number of overlaping other particles).&lt;/li&gt;
+&lt;li&gt;Fading effect that leaves a tail behind particles&lt;/li&gt;
+&lt;li&gt;Saving/loading to/from disk laws, colors and state, written in a custom file format.&lt;/li&gt;
+&lt;li&gt;Grounds for a widget tree that is actually be maintainable in C.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;a-few-gifs&#34;&gt;A few gifs&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;/ipsys-01.gif&#34; alt=&#34;Gif of an Ipsys system.&#34;&gt;
+&lt;img src=&#34;/ipsys-37.gif&#34; alt=&#34;Gif of an Ipsys system.&#34;&gt;
+&lt;img src=&#34;/ipsys-38.gif&#34; alt=&#34;Gif of an Ipsys system.&#34;&gt;
+&lt;img src=&#34;/ipsys-39.gif&#34; alt=&#34;Gif of an Ipsys system.&#34;&gt;&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Anima&#39;s Portfolio' />
+
+    <meta property="og:title" content="IPSYS - Particle system with nice random laws in C &amp; OpenGL" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Anima" />
+    
+    <meta
+        property="article:published_time"
+        content='2024-03-06T18:51:08Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="C" />
+        
+            <meta property="article:tag" content="OpenGL" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/ipsys/" />
+    
+    
+        
+            
+        
+    
+    <meta property="og:image"
+        content="http://localhost:1313/ipsys-saves-21.png" />
+    
+        <meta property="og:description" content="&lt;p&gt;Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intres" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/ipsys/" />
+
+
+    <meta name="twitter:title" content="IPSYS - Particle system with nice random laws in C &amp; OpenGL" />
+    
+    
+    
+        
+            
+        
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/ipsys-saves-21.png" />
+    
+        <meta name="twitter:description" content="&lt;p&gt;Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intres" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/favicon.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Anima&#39;s Portfolio</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+            <li><a href="http://localhost:1313/pages/aboutme/">
+                About me
+            </a></li>
+        
+        
+            <li><a href="/cv-jeanne.pdf">CV</a></li>
+        
+            <li><a href="/rec-letter-jeanne.pdf">Letter of recommendation (fr)</a></li>
+        
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="links">
+        
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/anima-libera">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://discordapp.com/users/430844208228597760">
+    
+    
+        &#xf1ff;
+    
+    <span>
+        Discord
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>IPSYS - Particle system with nice random laws in C &amp; OpenGL</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-03-06
+
+
+        </p>
+    
+    
+    
+        <figure style="margin: 0">
+            
+                <img src="/ipsys-saves-21.png" alt="" />
+            
+            
+        </figure>
+    
+    
+    <div><p>Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intresting.</p>
+<p><a href="https://github.com/anima-libera/ipsys">GitHub repository</a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>Particle system that runs on the GPU in a compute shader.</li>
+<li>Different particle types, the number of which is decided at launch time.</li>
+<li>Interaction laws for each oriented pair of particle types:
+<ul>
+<li>The interaction laws depend on the distance between the interactee and the interacter particles.</li>
+<li>There are multiple laws for each oridented pair:
+<ul>
+<li>A law that dictates attraction/repultion,</li>
+<li>a law that dictates rotation to the left/right, and</li>
+<li>a law that dictates acceleration/deceleration.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Interaction law randomizer, carefully tweaked to maximize &ldquo;intresting&rdquo; results occurences.</li>
+<li>Randomized colors for each partcile type, color changing with speed and pressure (number of overlaping other particles).</li>
+<li>Fading effect that leaves a tail behind particles</li>
+<li>Saving/loading to/from disk laws, colors and state, written in a custom file format.</li>
+<li>Grounds for a widget tree that is actually be maintainable in C.</li>
+</ul>
+<h1 id="a-few-gifs">A few gifs</h1>
+<p><img src="/ipsys-01.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-37.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-38.gif" alt="Gif of an Ipsys system.">
+<img src="/ipsys-39.gif" alt="Gif of an Ipsys system."></p>
+<h1 id="gallery">Gallery</h1>
+<p><img src="/ipsys-saves-01.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-saves-22.png" alt="Image of an Ipsys system."></p>
+<p><img src="/ipsys-00.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-02.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-03.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-04.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-05.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-06.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-07.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-08.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-09.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-10.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-11.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-12.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-13.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-14.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-15.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-16.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-17.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-18.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-19.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-20.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-21.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-22.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-23.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-24.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-25.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-26.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-27.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-28.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-29.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-30.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-31.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-32.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-33.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-34.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-35.png" alt="Image of an Ipsys system.">
+<img src="/ipsys-36.png" alt="Image of an Ipsys system."></p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/c/">#C</a>
+        
+            <a
+                
+                href="/tags/opengl/">#OpenGL</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2025 &copy; Anima
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>
