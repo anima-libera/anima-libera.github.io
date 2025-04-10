@@ -5,6 +5,7 @@ draft = false
 tags = ['Rust', 'Wgpu']
 image = "/qwy3-00.png"
 toc = true
+summary = "Work in progress Minecraft-like, and also my Magnum Opus! Has infinite fast worldgen that uses some intersting principles that I explain here, along many other features."
 +++
 
 Work in progress Minecraft-like. This project intends to serve as a base to experiment with procedural generation a bit more than what is usually done in Minecraft-likes. This page will only present what is already implemented and will not focus of the future of this project (for which I have so many ideas).
@@ -33,6 +34,7 @@ Work in progress Minecraft-like. This project intends to serve as a base to expe
 - Custom widget tree for the interface.
 - Grounds for a statically typed stripting language.
 - Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn't cost anything to make this a parameter.)
+- Multiplayer (in a closed source repository).
 
 # Gallery
 

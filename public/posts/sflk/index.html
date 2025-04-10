@@ -58,31 +58,7 @@
         <meta name="keywords" content='Rust' />
     
     
-        <meta name="description" content=" at &amp;ldquo;making their own programming language&amp;rdquo; is common place among programmers. My attempt at an interpreted language aimed at trying new things instead of focussing on speed, having fun instead of believing that my language would attract any intrest, there are hundreds of new languages each months after all.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/sflk-lang/sflk&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;features&#34;&gt;Features&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Handmade tokenizer and parser.&lt;/li&gt;
-&lt;li&gt;Handmade implementation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic&#34;&gt;big integers and arbitrarily precise fractions&lt;/a&gt; (!!), with unit tests. Can be seen &lt;a href=&#34;https://github.com/sflk-lang/sflk/blob/849f8b1571475e25f14017ff61d7d65bfd6fc40f/sflk-lang/src/bignums.rs&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Algebraic effects, which I only learned about after implementng them (they are called &amp;ldquo;signals&amp;rdquo; in SFLK). All side effects executed by a scope can be intercepted by an outer scope with full control about what to do with it and how to respond.&lt;/li&gt;
-&lt;li&gt;Bytecode.&lt;/li&gt;
-&lt;li&gt;Visualizer of the AST and of the program execution (with scopes visible as gutter indentations).&lt;/li&gt;
-&lt;li&gt;Grounds for the pretty printing of remarks about the program.&lt;/li&gt;
-&lt;li&gt;Original design in some syntactical and semantical aspects of the language (most of which are for fun, to try something new regardless of usefulness or relevancy):
-&lt;ul&gt;
-&lt;li&gt;No statement separator, ignored whitespace and two-letters keywords make for concise scripts.&lt;/li&gt;
-&lt;li&gt;Arbitrary number and order of &amp;ldquo;then&amp;rdquo; and &amp;ldquo;else&amp;rdquo; branches of if statements, same goes for some other clauses of other statements such as loop body and such.&lt;/li&gt;
-&lt;li&gt;Loop separator clause that runs inbetween iterations of the loop body.&lt;/li&gt;
-&lt;li&gt;Blocks of code are expressions, first-class values that can be executed in the current scope or in a sub-scope, they can be concatenated together or repeated, they replace functions.&lt;/li&gt;
-&lt;li&gt;Variable table of a scope can be copied, manipulated and poored in a scope, they replace hashmaps with identifier strings as keys.&lt;/li&gt;
-&lt;li&gt;Method-chain-like precedence for expressions involving binary operators.&lt;/li&gt;
-&lt;li&gt;Syntax error that disturb even the parser are &amp;ldquo;ignored&amp;rdquo; in that they are ebedded in the AST and as long as they are not executed then no error is raised. Debugging tools in the intrepreted allow to still see these errors as it would be hard to debug otherwise.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A README explaning all the language quirks and features.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;why&#34;&gt;Why?&lt;/h1&gt;
-&lt;p&gt;For fun!&lt;/p&gt;" />
+        <meta name="description" content=" at &amp;ldquo;making their own programming language&amp;rdquo; is common place among programmers. My attempt at an interpreted language aimed at trying new things instead of focussing on speed, having fun instead of believing that my language would attract any intrest, there are hundreds of new languages each months after all.&lt;/p&gt;" />
     
 
 <meta property="og:site_name"
@@ -291,8 +267,7 @@
 <img src="/sflk-09.png" alt="Image of an SFLK program output read as the PPM image it is."></p>
 <p>Here can be seen an SFLK program defining and then using a &ldquo;signal interceptor&rdquo; (which happens to really be just an effect handler actually):</p>
 <p><img src="/sflk-10.png" alt="Image of an SFLK program defining a &ldquo;signal interceptor&rdquo; (an effect handler).">
-<img src="/sflk-11.png" alt="Image of an SFLK program using that interceptor."></p>
-</div>
+<img src="/sflk-11.png" alt="Image of an SFLK program using that interceptor."></p></div>
 </article>
 
     <hr />

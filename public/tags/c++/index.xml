@@ -43,8 +43,7 @@
 <img src="/qwy2-05.png" alt="Image of some Qwy2 flat-ish world with a handmade small amongus crewmate statue."></p>
 <h1 id="why-the-qwy3-rewrite">Why the Qwy3 rewrite?</h1>
 <p>Since learning <a href="https://www.rust-lang.org/">Rust</a> (memory safe, no undefined behavior, super clean language features and type system, <a href="https://doc.rust-lang.org/book/ch16-00-concurrency.html">fearless concurrency (!)</a>, standard package manager, etc.) and hearing about <a href="https://wgpu.rs/">Wgpu</a> (<em>safe graphics API</em> implemented in Rust, <a href="https://www.w3.org/TR/WGSL/">WGSL</a> (clean shader language), Vulkan backend to use its validation layers), I thought more and more about the state of Qwy2, stuck with old technologies (C++ and OpenGL, full of undefined behavior, legacy and inelegant features) and how much easier the development would have been if it was made in Rust &amp; Wgpu since the beginning. In addition, I was unhappy with some technical decisions made for Qwy2 (for example the fact that there are multiple generation steps for each chunks, making generation very slow), and a rewrite would allow to benefit from these mistakes to make it better.</p>
-<p>So far, I believe that the <a href="http://localhost:1313/posts/qwy3/">Qwy3</a> rewrite in Rust &amp; Wgpu was the best decision regarding this project. Qwy2 shall remain in its unfinished state as the previous iteration of Qwy3. Third time&rsquo;s a charm!</p>
-]]></description>
+<p>So far, I believe that the <a href="http://localhost:1313/posts/qwy3/">Qwy3</a> rewrite in Rust &amp; Wgpu was the best decision regarding this project. Qwy2 shall remain in its unfinished state as the previous iteration of Qwy3. Third time&rsquo;s a charm!</p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/qwy2-00.png" />
       
@@ -84,8 +83,7 @@
 <p>The other projects it was used in did not make it to this portfolio due to not being presentable enough due to being abandoned too soon.</p>
 <ul>
 <li><a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/tree/13c518f35dc117efe8e8cde31050be757cac7a6a/buildsystem">Here</a> it is used in an abandoned C project that I happened to have posted on GitHub, with the code generation for ressource embedding being triggered by <a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/blob/13c518f35dc117efe8e8cde31050be757cac7a6a/src/embedded.h">this special header</a>.</li>
-</ul>
-]]></description>
+</ul>]]></description>
       
     </item>
     

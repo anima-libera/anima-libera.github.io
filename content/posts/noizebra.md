@@ -8,6 +8,8 @@ image = "/noizebra-00.png"
 
 A prototype for the noise implementation of [Qwy3]({{< ref "posts/qwy3" >}}), and a collection of experiments with the noise to discover ways to manipulate it into intresting or desired shapes ([Qwy3]({{< ref "posts/qwy3" >}}) also uses that experience).
 
+<!--more-->
+
 [GitHub repository](https://github.com/anima-libera/noizebra)
 
 # Features

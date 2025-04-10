@@ -102,8 +102,7 @@
 <img src="/ipsys-33.png" alt="Image of an Ipsys system.">
 <img src="/ipsys-34.png" alt="Image of an Ipsys system.">
 <img src="/ipsys-35.png" alt="Image of an Ipsys system.">
-<img src="/ipsys-36.png" alt="Image of an Ipsys system."></p>
-]]></description>
+<img src="/ipsys-36.png" alt="Image of an Ipsys system."></p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/ipsys-saves-21.png" />
       
@@ -143,8 +142,7 @@
 <p>The other projects it was used in did not make it to this portfolio due to not being presentable enough due to being abandoned too soon.</p>
 <ul>
 <li><a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/tree/13c518f35dc117efe8e8cde31050be757cac7a6a/buildsystem">Here</a> it is used in an abandoned C project that I happened to have posted on GitHub, with the code generation for ressource embedding being triggered by <a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/blob/13c518f35dc117efe8e8cde31050be757cac7a6a/src/embedded.h">this special header</a>.</li>
-</ul>
-]]></description>
+</ul>]]></description>
       
     </item>
     
@@ -187,8 +185,7 @@
 <p><img src="/spine-02.png" alt="Image of some Spine named functions."></p>
 <h1 id="why">Why?</h1>
 <p>For fun!</p>
-<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>
-]]></description>
+<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/spine-02.png" />
       

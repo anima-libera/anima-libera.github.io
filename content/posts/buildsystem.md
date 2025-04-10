@@ -7,6 +7,8 @@ tags = ['Python', 'C', 'C++']
 
 Handmade build system for C/C++ executable projects, made in Python.
 
+<!--more-->
+
 # Features
 
 - Creating new source files warrant no modification of the build system.

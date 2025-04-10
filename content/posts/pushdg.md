@@ -4,6 +4,7 @@ date = 2024-03-06T18:49:08+01:00
 draft = false
 tags = ['Rust']
 image = "/pushdg-03.png"
+summary = "Dungeon crawler on a procedurally generated square-tiled grid with turn-based sokoban-like mechanics."
 +++
 
 Dungeon crawler on a procedurally generated square-tiled grid with turn-based sokoban-like mechanics. Instead of winning by grinding and having high enough stats, what if we fight by carefully controlling the layout like we win in a sokoban-like puzzle game? Push and pull objects on the grid, anticipate or even bait the enemies in a position in which you win, avoid getting cornered or blocked as the "redo"s (points spent to cancel actions) are limited and as precious as HP, if not more. Death can be undone if there are enough reods left to get back in a non-losing position.

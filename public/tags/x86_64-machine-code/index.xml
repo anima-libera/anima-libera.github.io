@@ -46,8 +46,7 @@
 <p><img src="/spine-02.png" alt="Image of some Spine named functions."></p>
 <h1 id="why">Why?</h1>
 <p>For fun!</p>
-<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>
-]]></description>
+<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/spine-02.png" />
       

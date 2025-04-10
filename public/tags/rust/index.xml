@@ -39,6 +39,7 @@
 <li>Custom widget tree for the interface.</li>
 <li>Grounds for a statically typed stripting language.</li>
 <li>Configurable chunk size at launch time. (Actually useful as this parameter influences the performance of the generation, gameloop and memory usage in complex ways and the best value that optimizes for what a given user prefers on a given machine may be different from one another, and it doesn&rsquo;t cost anything to make this a parameter.)</li>
+<li>Multiplayer (in a closed source repository).</li>
 </ul>
 <h1 id="gallery">Gallery</h1>
 <p><img src="/qwy3-28.png" alt="Image of some Qwy3 world."></p>
@@ -214,8 +215,7 @@ Video of some Qwy3 block entities being thrown around a flat world.
 <img src="/noizebra-17.png" alt="Image of a Noizebra output.">
 <img src="/noizebra-18.png" alt="Image of a Noizebra output.">
 <img src="/noizebra-19.png" alt="Image of a Noizebra output.">
-<img src="/noizebra-20.png" alt="Image of a Noizebra output."></p>
-]]></description>
+<img src="/noizebra-20.png" alt="Image of a Noizebra output."></p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/noizebra-00.png" />
       
@@ -303,8 +303,7 @@ Video of some Qwy3 block entities being thrown around a flat world.
 <img src="/sflk-09.png" alt="Image of an SFLK program output read as the PPM image it is."></p>
 <p>Here can be seen an SFLK program defining and then using a &ldquo;signal interceptor&rdquo; (which happens to really be just an effect handler actually):</p>
 <p><img src="/sflk-10.png" alt="Image of an SFLK program defining a &ldquo;signal interceptor&rdquo; (an effect handler).">
-<img src="/sflk-11.png" alt="Image of an SFLK program using that interceptor."></p>
-]]></description>
+<img src="/sflk-11.png" alt="Image of an SFLK program using that interceptor."></p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/sflk-00.png" />
       
@@ -349,8 +348,7 @@ Video of some Qwy3 block entities being thrown around a flat world.
 <p><img src="/spine-02.png" alt="Image of some Spine named functions."></p>
 <h1 id="why">Why?</h1>
 <p>For fun!</p>
-<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>
-]]></description>
+<p>This took some learning about the x86_64 architecture, the <a href="https://cdrdv2-public.intel.com/782156/325383-sdm-vol-2abcd.pdf">x86_64 machine code representation of assembly instructions</a> (which is known to be quite complex in some areas), the 64-bit <a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF executable format</a> with its many fields and headers, how to work with machine code (not even assembly) and debug such matters.</p>]]></description>
       
         <media:thumbnail url="http://localhost:1313/spine-02.png" />
       

@@ -41,8 +41,7 @@
 <p>The other projects it was used in did not make it to this portfolio due to not being presentable enough due to being abandoned too soon.</p>
 <ul>
 <li><a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/tree/13c518f35dc117efe8e8cde31050be757cac7a6a/buildsystem">Here</a> it is used in an abandoned C project that I happened to have posted on GitHub, with the code generation for ressource embedding being triggered by <a href="https://github.com/anima-libera/WhyCrystals-abandoned-2/blob/13c518f35dc117efe8e8cde31050be757cac7a6a/src/embedded.h">this special header</a>.</li>
-</ul>
-]]></description>
+</ul>]]></description>
       
     </item>
     

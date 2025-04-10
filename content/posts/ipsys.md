@@ -8,6 +8,8 @@ image = "/ipsys-saves-21.png"
 
 Visualizer of a particle system with randomized interaction laws that often happen to be quite mesmerizing to contemplate. Fast, colorful and somewhat intresting.
 
+<!--more-->
+
 [GitHub repository](https://github.com/anima-libera/ipsys)
 
 # Features

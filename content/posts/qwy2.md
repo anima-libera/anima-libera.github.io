@@ -9,6 +9,8 @@ toc = true
 
 The previous Minecraft-like attempt before [Qwy3]({{< ref "posts/qwy3" >}}).
 
+<!--more-->
+
 [GitHub repository](https://github.com/anima-libera/qwy2)
 
 # Features
